@@ -114,7 +114,7 @@
             color: #e0e6ff;
         }
 
-        /* DESTAQUE: CARD DE TESTE GRÁTIS - DIFERENCIADO */
+        /* DESTAQUE: CARD DE TESTE GRÁTIS */
         .free-trial-card {
             background: linear-gradient(135deg, #1e2a3a, #0f1722);
             border-radius: 36px;
@@ -125,7 +125,6 @@
             border: 2px solid rgba(255, 77, 77, 0.6);
             box-shadow: 0 20px 35px rgba(255, 77, 77, 0.3), inset 0 1px 0 rgba(255,255,255,0.1);
             transition: all 0.3s ease;
-            backdrop-filter: blur(4px);
         }
         .free-trial-card:hover {
             transform: translateY(-5px);
@@ -179,10 +178,9 @@
         .btn-free-trial:hover {
             transform: scale(1.02);
             background: linear-gradient(135deg, #e63e3e, #a82424);
-            box-shadow: 0 12px 28px rgba(255, 77, 77, 0.7);
         }
 
-        /* ANÚNCIO: INDICAÇÃO GANHE 1 MÊS GRÁTIS */
+        /* ANÚNCIO: INDICAÇÃO GANHE 1 MÊS GRÁTIS (somente quem indica) - SEM LINK, APENAS WHATSAPP */
         .indication-banner {
             background: linear-gradient(110deg, #0f212e, #1a2a33);
             border-radius: 28px;
@@ -196,10 +194,6 @@
             gap: 1rem;
             border-left: 8px solid #ffbc6e;
             box-shadow: 0 10px 25px rgba(0,0,0,0.5);
-            transition: transform 0.2s;
-        }
-        .indication-banner:hover {
-            transform: scale(1.01);
         }
         .indication-text {
             flex: 2;
@@ -225,15 +219,57 @@
             font-size: 1rem;
             cursor: pointer;
             color: #111;
-            transition: 0.2s;
             display: flex;
             align-items: center;
             gap: 8px;
             box-shadow: 0 5px 12px rgba(37,211,102,0.4);
+            transition: 0.2s;
         }
         .indication-btn:hover {
             background: #1da853;
             transform: translateY(-2px);
+        }
+
+        /* Seção dispositivos compatíveis */
+        .devices-section {
+            background: #0f111a;
+            padding: 2rem 1.5rem;
+            text-align: center;
+            border-top: 1px solid rgba(255,77,77,0.2);
+            border-bottom: 1px solid rgba(255,77,77,0.2);
+        }
+        .devices-container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .devices-text {
+            flex: 1;
+            min-width: 200px;
+        }
+        .devices-text h3 {
+            font-size: 1.6rem;
+            margin-bottom: 0.5rem;
+        }
+        .devices-text p {
+            color: #bbb;
+        }
+        .devices-image {
+            flex: 1;
+            max-width: 280px;
+        }
+        .devices-image img {
+            width: 100%;
+            height: auto;
+            filter: drop-shadow(0 8px 20px rgba(0,0,0,0.5));
+            transition: transform 0.3s;
+        }
+        .devices-image img:hover {
+            transform: scale(1.02);
         }
 
         .btn-whatsapp {
@@ -252,9 +288,6 @@
             gap: 12px;
         }
 
-        .grade-section, .planos, .footer {
-            /* estilos existentes */
-        }
         .grade-section {
             padding: 4rem 2rem;
             background: #0f111a;
@@ -339,6 +372,8 @@
             text-align: center;
             transition: all 0.3s ease;
             border: 1px solid rgba(255, 77, 77, 0.2);
+            display: flex;
+            flex-direction: column;
         }
         .plano:hover {
             transform: scale(1.03);
@@ -347,13 +382,38 @@
         }
         .plano h3 {
             font-size: 1.8rem;
-            margin-bottom: 1rem;
+            margin-bottom: 0.5rem;
         }
         .preco {
             font-size: 2rem;
             font-weight: 800;
             color: #ffbc6e;
             margin: 1rem 0;
+            line-height: 1.2;
+            white-space: normal;
+            word-break: keep-all;
+        }
+        .preco small {
+            font-size: 0.85rem;
+            font-weight: 400;
+            color: #aaa;
+            white-space: nowrap;
+        }
+        .plano ul {
+            list-style: none;
+            margin: 1.2rem 0;
+            flex-grow: 1;
+        }
+        .plano li {
+            margin: 0.6rem 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            font-size: 0.85rem;
+        }
+        .plano li i {
+            color: #25D366;
         }
         .btn-plano {
             background: #ff4d4d;
@@ -364,9 +424,12 @@
             font-weight: bold;
             width: 100%;
             cursor: pointer;
+            margin-top: 0.5rem;
+            transition: 0.2s;
         }
         .btn-plano:hover {
             background: #e03a3a;
+            transform: scale(0.98);
         }
         .footer {
             background: #05070c;
@@ -451,6 +514,9 @@
             .free-trial-card h2 { font-size: 1.8rem; }
             .free-trial-card .hours { font-size: 2.8rem; }
             .indication-banner { flex-direction: column; text-align: center; }
+            .devices-container { flex-direction: column; text-align: center; }
+            .preco { font-size: 1.6rem; }
+            .preco small { white-space: normal; display: inline-block; }
         }
     </style>
 </head>
@@ -464,7 +530,7 @@
     <button class="btn-whatsapp" id="heroWhatsBtn"><i class="fab fa-whatsapp"></i> Fale conosco no WhatsApp</button>
 </section>
 
-<!-- CARD DE TESTE GRÁTIS EM DESTAQUE (conforme solicitado) -->
+<!-- CARD DE TESTE GRÁTIS -->
 <div class="container" style="margin-top: -50px; position: relative; z-index: 5;">
     <div class="free-trial-card">
         <div class="badge-free"><i class="fas fa-gift"></i> OFERTA ESPECIAL</div>
@@ -477,19 +543,32 @@
     </div>
 </div>
 
-<!-- ANÚNCIO INDICAÇÃO: GANHE 1 MÊS GRÁTIS (como na imagem em anexo) -->
+<!-- ANÚNCIO INDICAÇÃO: GANHE 1 MÊS GRÁTIS (SEM LINK, APENAS WHATSAPP) -->
 <div class="container">
     <div class="indication-banner">
         <div class="indication-text">
             <h3><i class="fas fa-user-friends"></i> INDICAÇÃO PREMIADA!</h3>
-            <p><strong>Indique um amigo para a Mplay e ganhe 1 MÊS GRÁTIS</strong> para você! Quanto mais amigos, mais meses. Sem limites, aproveite essa promoção imperdível.</p>
-            <p><i class="fas fa-check-circle" style="color:#25D366;"></i> Seu amigo ainda ganha 10% de desconto no primeiro plano.</p>
+            <p><strong>Indique um amigo para a Mplay e quando ele assinar, VOCÊ GANHA 1 MÊS GRÁTIS!</strong> Quanto mais amigos você indicar, mais meses gratuitos acumula. Promoção válida para todos os planos.</p>
+            <p><i class="fas fa-check-circle" style="color:#25D366;"></i> Entre em contato conosco pelo WhatsApp e saiba como participar.</p>
         </div>
-        <button class="indication-btn" id="indicateBtn"><i class="fab fa-whatsapp"></i> Indique agora e ganhe</button>
+        <button class="indication-btn" id="indicateBtn"><i class="fab fa-whatsapp"></i> Falar com suporte sobre indicação</button>
     </div>
 </div>
 
-<!-- Trailers -->
+<!-- SEÇÃO DISPOSITIVOS -->
+<div class="devices-section">
+    <div class="devices-container">
+        <div class="devices-text">
+            <h3><i class="fas fa-tv"></i> Compatível com todos os seus dispositivos</h3>
+            <p>Smart TV, Android TV, Fire Stick, Celular, Tablet, PC, Mac, e mais. A Mplay funciona perfeitamente onde você estiver.</p>
+        </div>
+        <div class="devices-image">
+            <img src="https://revistacasavip.com.br/wp-content/uploads/2026/02/ChatGPT_Image_22_de_fev._de_2026__14_03_28-removebg-preview.png" alt="Dispositivos compatíveis Mplay" onerror="this.src='https://placehold.co/300x200/ff4d4d/white?text=Smart+TV+%26+Devices'">
+        </div>
+    </div>
+</div>
+
+<!-- TRAILERS -->
 <section class="grade-section">
     <div class="container">
         <div class="section-title"><i class="fas fa-play-circle"></i> Roleta de Trailers</div>
@@ -501,7 +580,7 @@
     </div>
 </section>
 
-<!-- Catálogo em Destaque -->
+<!-- CATÁLOGO -->
 <section class="grade-section" style="background: #0a0c12;">
     <div class="container">
         <div class="section-title">🔥 Catálogo em Destaque</div>
@@ -514,15 +593,59 @@
     </div>
 </section>
 
-<!-- Planos de Assinatura -->
+<!-- PLANOS DE ASSINATURA - todos padronizados com as mesmas informações base, apenas mudando período e valor. Anual com destaque suporte prioritário -->
 <section class="planos">
     <div class="container">
         <div class="section-title">📺 Escolha seu plano Mplay</div>
         <div class="cards-planos">
-            <div class="plano"><h3>Mensal</h3><div class="preco">R$ 29,99<span style="font-size:0.85rem;">/mês</span></div><ul><li><i class="fas fa-check-circle"></i> Acesso completo</li><li><i class="fas fa-check-circle"></i> Canais + Filmes</li><li><i class="fas fa-check-circle"></i> Suporte 24h</li></ul><button class="btn-plano" data-plano="Mensal - R$29,99">Assinar agora</button></div>
-            <div class="plano"><h3>Trimestral</h3><div class="preco">R$ 79,99<span style="font-size:0.85rem;">/3 meses</span></div><ul><li><i class="fas fa-check-circle"></i> Economia 15%</li><li><i class="fas fa-check-circle"></i> 4K Ultra HD</li><li><i class="fas fa-check-circle"></i> Conteúdo exclusivo</li></ul><button class="btn-plano" data-plano="Trimestral - R$79,99">Assinar agora</button></div>
-            <div class="plano"><h3>Semestral</h3><div class="preco">R$ 149,99<span style="font-size:0.85rem;">/6 meses</span></div><ul><li><i class="fas fa-check-circle"></i> 6 meses c/ desconto</li><li><i class="fas fa-check-circle"></i> 4K + Eventos</li><li><i class="fas fa-check-circle"></i> Canais premium</li></ul><button class="btn-plano" data-plano="Semestral - R$149,99">Assinar agora</button></div>
-            <div class="plano"><h3>Anual <span style="font-size:0.7rem; background:#ff4d4d; padding:2px 8px; border-radius:40px;">MAIS ECONÔMICO</span></h3><div class="preco">R$ 279,99<span style="font-size:0.85rem;">/12 meses</span></div><ul><li><i class="fas fa-check-circle"></i> 2 meses grátis</li><li><i class="fas fa-check-circle"></i> Acesso VIP</li><li><i class="fas fa-check-circle"></i> Prioridade suporte</li></ul><button class="btn-plano" data-plano="Anual - R$279,99">Assinar agora</button></div>
+            <!-- Mensal -->
+            <div class="plano">
+                <h3>Mensal</h3>
+                <div class="preco">R$ 29,99 <small>/mês</small></div>
+                <ul>
+                    <li><i class="fas fa-check-circle"></i> Canais + Filmes + Séries</li>
+                    <li><i class="fas fa-check-circle"></i> Qualidade 4K e Ultra HD</li>
+                    <li><i class="fas fa-check-circle"></i> Suporte 24h</li>
+                    <li><i class="fas fa-check-circle"></i> Sem fidelidade</li>
+                </ul>
+                <button class="btn-plano" data-plano="Mensal - R$29,99">Assinar agora</button>
+            </div>
+            <!-- Trimestral -->
+            <div class="plano">
+                <h3>Trimestral</h3>
+                <div class="preco">R$ 79,99 <small>/3 meses</small></div>
+                <ul>
+                    <li><i class="fas fa-check-circle"></i> Canais + Filmes + Séries</li>
+                    <li><i class="fas fa-check-circle"></i> Qualidade 4K e Ultra HD</li>
+                    <li><i class="fas fa-check-circle"></i> Suporte 24h</li>
+                    <li><i class="fas fa-check-circle"></i> Sem fidelidade</li>
+                </ul>
+                <button class="btn-plano" data-plano="Trimestral - R$79,99">Assinar agora</button>
+            </div>
+            <!-- Semestral -->
+            <div class="plano">
+                <h3>Semestral</h3>
+                <div class="preco">R$ 149,99 <small>/6 meses</small></div>
+                <ul>
+                    <li><i class="fas fa-check-circle"></i> Canais + Filmes + Séries</li>
+                    <li><i class="fas fa-check-circle"></i> Qualidade 4K e Ultra HD</li>
+                    <li><i class="fas fa-check-circle"></i> Suporte 24h</li>
+                    <li><i class="fas fa-check-circle"></i> Melhor custo-benefício</li>
+                </ul>
+                <button class="btn-plano" data-plano="Semestral - R$149,99">Assinar agora</button>
+            </div>
+            <!-- Anual (com destaque para suporte prioritário) -->
+            <div class="plano">
+                <h3>Anual <span style="font-size:0.7rem; background:#ff4d4d; padding:2px 8px; border-radius:40px; margin-left:5px;">MAIS ECONÔMICO</span></h3>
+                <div class="preco">R$ 279,99 <small>/12 meses</small></div>
+                <ul>
+                    <li><i class="fas fa-check-circle"></i> Canais + Filmes + Séries</li>
+                    <li><i class="fas fa-check-circle"></i> Qualidade 4K e Ultra HD</li>
+                    <li><i class="fas fa-check-circle"></i> Suporte prioritário 24/7</li>
+                    <li><i class="fas fa-check-circle"></i> Acesso VIP a eventos</li>
+                </ul>
+                <button class="btn-plano" data-plano="Anual - R$279,99">Assinar agora</button>
+            </div>
         </div>
     </div>
 </section>
@@ -586,19 +709,18 @@
         });
     });
 
-    // AÇÃO DO BOTÃO DE TESTE GRÁTIS (destaque)
     freeTrialBtn.addEventListener('click', () => {
         const msgCustom = `Olá! Gostaria de solicitar meu TESTE GRÁTIS de 5 HORAS no Mplay. Tenho interesse em conhecer canais, filmes e séries. Aguardo contato!`;
         enviarWhats(null, msgCustom);
     });
 
-    // AÇÃO DO BOTÃO DE INDICAÇÃO (ganhe 1 mês grátis)
+    // Botão de indicação: envia contato direto para WhatsApp, sem link falso
     indicateBtn.addEventListener('click', () => {
-        const msgIndicacao = `Olá! Quero participar da promoção INDICAR E GANHAR 1 MÊS GRÁTIS. Tenho amigos que desejam assinar a Mplay. Me explique como funciona a indicação e os benefícios.`;
+        const msgIndicacao = `Olá! Quero participar da promoção INDICAR E GANHAR 1 MÊS GRÁTIS. Tenho amigos interessados em assinar a Mplay. Me explique como funciona para eu ganhar meus meses gratuitos.`;
         enviarWhats(null, msgIndicacao);
     });
 
-    // Animações de entrada
+    // Animações
     const cards = document.querySelectorAll('.trailer-card, .card-media');
     cards.forEach((card, idx) => {
         card.style.opacity = '0';
