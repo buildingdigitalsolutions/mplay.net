@@ -5,50 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
     <title>Mplay | A revolução do entretenimento IPTV</title>
     
-    <!-- ============================================ -->
-    <!-- FAVICON - Ícone na aba do navegador          -->
-    <!-- ============================================ -->
+    <!-- FAVICON -->
     <link rel="icon" type="image/jpeg" href="icone.jpeg">
     <link rel="shortcut icon" type="image/jpeg" href="icone.jpeg">
-    <link rel="icon" type="image/x-icon" href="icone.jpeg">
     
-    <!-- ============================================ -->
-    <!-- OPEN GRAPH META TAGS - Para WhatsApp/Facebook -->
-    <!-- ============================================ -->
-    <!-- Tipo de conteúdo -->
+    <!-- OPEN GRAPH META TAGS -->
     <meta property="og:type" content="website">
-    <!-- Título que aparece no compartilhamento -->
     <meta property="og:title" content="Mplay | A revolução do entretenimento IPTV">
-    <!-- Descrição que aparece no compartilhamento -->
-    <meta property="og:description" content="📺 IPTV de alta definição + Milhares de canais, filmes, séries e jogos. Qualidade 4K, sem travamentos e com o melhor preço! Assista onde quiser.">
-    <!-- URL do site -->
+    <meta property="og:description" content="📺 IPTV de alta definição + Milhares de canais, filmes, séries e jogos. Qualidade 4K, sem travamentos e com o melhor preço! Teste grátis disponível.">
     <meta property="og:url" content="https://seudominio.com">
-    <!-- IMAGEM que aparece no compartilhamento (USE A MESMA DO FAVICON) -->
     <meta property="og:image" content="https://buildingdigitalsolutions.github.io/mplay.net/icone.jpeg">
-    <!-- Tipo da imagem (JPEG, PNG, etc) -->
     <meta property="og:image:type" content="image/jpeg">
-    <!-- Largura da imagem (recomendado: 300px) -->
     <meta property="og:image:width" content="300">
-    <!-- Altura da imagem (recomendado: 300px para quadrada) -->
     <meta property="og:image:height" content="300">
-    <!-- Alternativa para WhatsApp (tamanho maior recomendado) -->
     <meta property="og:image:alt" content="Logo Mplay IPTV">
-    
-    <!-- ============================================ -->
-    <!-- META TAGS PARA TWITTER (opcional, mas bom ter) -->
-    <!-- ============================================ -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Mplay | A revolução do entretenimento IPTV">
     <meta name="twitter:description" content="📺 IPTV de alta definição com milhares de canais, filmes e séries em 4K">
     <meta name="twitter:image" content="https://buildingdigitalsolutions.github.io/mplay.net/icone.jpeg">
-    
-    <!-- ============================================ -->
-    <!-- META TAG PARA O WHATSAPP ESPECIFICAMENTE     -->
-    <!-- ============================================ -->
     <meta property="og:locale" content="pt_BR">
     <meta property="og:site_name" content="Mplay IPTV">
     
-    <!-- Google Fonts + Font Awesome -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     
@@ -66,7 +43,7 @@
             scroll-behavior: smooth;
         }
 
-        /* Banner com imagem de fundo e efeitos especiais */
+        /* Hero section */
         .hero {
             background: linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.85)), url('https://i.pinimg.com/originals/60/9e/b8/609eb84a96ab833b47bf0c31a8f2b4eb.jpg');
             background-size: cover;
@@ -89,7 +66,6 @@
             pointer-events: none;
         }
 
-        /* Efeito de brilho no logo */
         .logo {
             font-size: 4.5rem;
             font-weight: 800;
@@ -105,17 +81,10 @@
         }
 
         @keyframes glow {
-            0% {
-                text-shadow: 0 0 20px rgba(255, 77, 77, 0.3);
-                filter: brightness(1);
-            }
-            100% {
-                text-shadow: 0 0 50px rgba(255, 77, 77, 0.8), 0 0 20px rgba(255, 188, 110, 0.5);
-                filter: brightness(1.1);
-            }
+            0% { text-shadow: 0 0 20px rgba(255, 77, 77, 0.3); filter: brightness(1); }
+            100% { text-shadow: 0 0 50px rgba(255, 77, 77, 0.8), 0 0 20px rgba(255, 188, 110, 0.5); filter: brightness(1.1); }
         }
 
-        /* Slogan com efeito neon */
         .slogan {
             font-size: 1.3rem;
             font-weight: 500;
@@ -125,40 +94,146 @@
             padding: 0.7rem 2rem;
             border-radius: 50px;
             margin-bottom: 1.5rem;
-            letter-spacing: 0.5px;
             border: 1px solid rgba(255,77,77,0.5);
-            box-shadow: 0 0 20px rgba(255,77,77,0.2);
         }
 
         .hero h1 {
             font-size: 3.2rem;
             font-weight: 800;
-            margin: 1rem 0 1rem;
+            margin: 1rem 0;
             background: linear-gradient(135deg, #fff, #ffbc6e);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
-            animation: fadeInUp 1s ease;
         }
 
         .hero p {
             font-size: 1.2rem;
             max-width: 700px;
             margin: 0 auto 2rem;
-            opacity: 0.95;
             color: #e0e6ff;
-            animation: fadeInUp 1s ease 0.2s both;
         }
 
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        /* DESTAQUE: CARD DE TESTE GRÁTIS - DIFERENCIADO */
+        .free-trial-card {
+            background: linear-gradient(135deg, #1e2a3a, #0f1722);
+            border-radius: 36px;
+            padding: 2rem 2rem;
+            margin: 2rem auto;
+            max-width: 600px;
+            text-align: center;
+            border: 2px solid rgba(255, 77, 77, 0.6);
+            box-shadow: 0 20px 35px rgba(255, 77, 77, 0.3), inset 0 1px 0 rgba(255,255,255,0.1);
+            transition: all 0.3s ease;
+            backdrop-filter: blur(4px);
+        }
+        .free-trial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 30px 45px rgba(255, 77, 77, 0.5);
+            border-color: #ff4d4d;
+        }
+        .free-trial-card .badge-free {
+            display: inline-block;
+            background: #ff4d4d;
+            color: white;
+            font-weight: bold;
+            padding: 0.3rem 1.2rem;
+            border-radius: 40px;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+        }
+        .free-trial-card h2 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #fff, #ffbc6e);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .free-trial-card .hours {
+            font-size: 4rem;
+            font-weight: 800;
+            color: #ffbc6e;
+            margin: 0.5rem 0;
+            line-height: 1;
+        }
+        .free-trial-card p {
+            color: #ccc;
+            margin: 1rem 0;
+        }
+        .btn-free-trial {
+            background: linear-gradient(135deg, #ff4d4d, #c53030);
+            border: none;
+            padding: 1rem 2rem;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border-radius: 50px;
+            color: white;
+            cursor: pointer;
+            transition: 0.2s;
+            box-shadow: 0 8px 20px rgba(255, 77, 77, 0.4);
+            width: 80%;
+            margin-top: 0.5rem;
+        }
+        .btn-free-trial:hover {
+            transform: scale(1.02);
+            background: linear-gradient(135deg, #e63e3e, #a82424);
+            box-shadow: 0 12px 28px rgba(255, 77, 77, 0.7);
+        }
+
+        /* ANÚNCIO: INDICAÇÃO GANHE 1 MÊS GRÁTIS */
+        .indication-banner {
+            background: linear-gradient(110deg, #0f212e, #1a2a33);
+            border-radius: 28px;
+            padding: 1.8rem;
+            margin: 2rem auto;
+            max-width: 900px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            border-left: 8px solid #ffbc6e;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+            transition: transform 0.2s;
+        }
+        .indication-banner:hover {
+            transform: scale(1.01);
+        }
+        .indication-text {
+            flex: 2;
+        }
+        .indication-text h3 {
+            font-size: 1.6rem;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #ffbc6e;
+        }
+        .indication-text p {
+            margin-top: 6px;
+            color: #ddd;
+        }
+        .indication-btn {
+            background: #25D366;
+            border: none;
+            padding: 0.9rem 1.8rem;
+            border-radius: 60px;
+            font-weight: bold;
+            font-size: 1rem;
+            cursor: pointer;
+            color: #111;
+            transition: 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 5px 12px rgba(37,211,102,0.4);
+        }
+        .indication-btn:hover {
+            background: #1da853;
+            transform: translateY(-2px);
         }
 
         .btn-whatsapp {
@@ -175,25 +250,19 @@
             display: inline-flex;
             align-items: center;
             gap: 12px;
-            animation: fadeInUp 1s ease 0.4s both;
         }
 
-        .btn-whatsapp:hover {
-            transform: translateY(-3px) scale(1.02);
-            box-shadow: 0 15px 35px rgba(37, 211, 102, 0.6);
+        .grade-section, .planos, .footer {
+            /* estilos existentes */
         }
-
-        /* seção grade de conteúdo */
         .grade-section {
             padding: 4rem 2rem;
             background: #0f111a;
         }
-
         .container {
             max-width: 1300px;
             margin: 0 auto;
         }
-
         .section-title {
             font-size: 2rem;
             font-weight: 700;
@@ -201,7 +270,6 @@
             text-align: center;
             position: relative;
         }
-
         .section-title:after {
             content: '';
             width: 80px;
@@ -211,102 +279,51 @@
             margin: 0.8rem auto 0;
             border-radius: 4px;
         }
-
-        /* Grid para trailers e catálogo */
         .grid-trailers, .grid-imagens {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 2rem;
             margin-top: 1rem;
         }
-
-        /* Card de trailer com vídeo */
-        .trailer-card {
+        .trailer-card, .card-media {
             background: #1a1d2b;
             border-radius: 24px;
             overflow: hidden;
-            transition: transform 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1), box-shadow 0.3s;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            transition: transform 0.4s, box-shadow 0.3s;
         }
-
-        .trailer-card:hover {
+        .trailer-card:hover, .card-media:hover {
             transform: translateY(-10px);
             box-shadow: 0 25px 35px rgba(255, 77, 77, 0.2);
         }
-
         .video-container {
             position: relative;
             width: 100%;
             aspect-ratio: 16 / 9;
-            background: #000;
-            cursor: pointer;
         }
-
         .video-container iframe {
             width: 100%;
             height: 100%;
             border: none;
         }
-
-        .trailer-info {
+        .trailer-info, .card-media .info {
             padding: 1rem;
             text-align: center;
             background: linear-gradient(145deg, #1e2130, #13161f);
-        }
-
-        .trailer-info h3 {
-            font-size: 1rem;
             font-weight: 600;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            line-height: 1.4;
         }
-
-        .play-hint {
-            font-size: 0.7rem;
-            color: #ffbc6e;
-            margin-top: 0.4rem;
-        }
-
-        .card-media {
-            background: #1a1d2b;
-            border-radius: 24px;
-            overflow: hidden;
-            transition: transform 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1), box-shadow 0.3s;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-        }
-
-        .card-media:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 25px 35px rgba(255, 77, 77, 0.2);
-        }
-
         .card-media img {
             width: 100%;
             height: 220px;
             object-fit: cover;
-            transition: transform 0.5s ease;
+            transition: transform 0.5s;
         }
-
         .card-media:hover img {
             transform: scale(1.03);
         }
-
-        .card-media .info {
-            padding: 1rem;
-            text-align: center;
-            font-weight: 600;
-            background: linear-gradient(145deg, #1e2130, #13161f);
-        }
-
-        /* planos */
         .planos {
             background: #0a0c12;
             padding: 4rem 2rem;
         }
-
         .cards-planos {
             display: flex;
             flex-wrap: wrap;
@@ -314,7 +331,6 @@
             gap: 2rem;
             margin-top: 2rem;
         }
-
         .plano {
             background: #13161f;
             border-radius: 32px;
@@ -323,53 +339,22 @@
             text-align: center;
             transition: all 0.3s ease;
             border: 1px solid rgba(255, 77, 77, 0.2);
-            backdrop-filter: blur(2px);
         }
-
         .plano:hover {
             transform: scale(1.03);
             border-color: #ff4d4d;
             box-shadow: 0 20px 35px rgba(255, 77, 77, 0.25);
         }
-
         .plano h3 {
             font-size: 1.8rem;
             margin-bottom: 1rem;
         }
-
         .preco {
             font-size: 2rem;
             font-weight: 800;
             color: #ffbc6e;
             margin: 1rem 0;
-            white-space: nowrap;
         }
-
-        .preco small {
-            font-size: 0.85rem;
-            font-weight: 400;
-            color: #aaa;
-            white-space: nowrap;
-        }
-
-        .plano ul {
-            list-style: none;
-            margin: 1.5rem 0;
-        }
-
-        .plano li {
-            margin: 0.7rem 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            font-size: 0.85rem;
-        }
-
-        .plano li i {
-            color: #25D366;
-        }
-
         .btn-plano {
             background: #ff4d4d;
             border: none;
@@ -379,26 +364,16 @@
             font-weight: bold;
             width: 100%;
             cursor: pointer;
-            transition: 0.2s;
-            font-size: 1rem;
         }
-
         .btn-plano:hover {
             background: #e03a3a;
-            transform: scale(0.98);
-            box-shadow: 0 5px 12px rgba(255, 77, 77, 0.5);
         }
-
-        /* rodapé e whatsapp fixo */
         .footer {
             background: #05070c;
             text-align: center;
             padding: 2rem;
-            font-size: 0.9rem;
             color: #aaa;
         }
-
-        /* Logo redonda no rodapé */
         .footer-logo {
             width: 60px;
             height: 60px;
@@ -406,19 +381,7 @@
             object-fit: cover;
             margin-bottom: 1rem;
             border: 2px solid #ff4d4d;
-            box-shadow: 0 0 15px rgba(255, 77, 77, 0.4);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-
-        .footer-logo:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 25px rgba(255, 77, 77, 0.7);
-        }
-
-        .footer-text {
-            margin-top: 0.5rem;
-        }
-
         .whatsapp-float {
             position: fixed;
             bottom: 25px;
@@ -432,20 +395,10 @@
             justify-content: center;
             font-size: 2rem;
             color: white;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-            transition: all 0.3s;
-            z-index: 99;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
             cursor: pointer;
-            text-decoration: none;
+            z-index: 99;
         }
-
-        .whatsapp-float:hover {
-            transform: scale(1.1);
-            background-color: #1f9e4e;
-            box-shadow: 0 8px 22px rgba(37, 211, 102, 0.6);
-        }
-
-        /* modal de contato WhatsApp */
         .modal-wpp {
             position: fixed;
             bottom: 100px;
@@ -491,300 +444,181 @@
             text-align: right;
             font-size: 20px;
             cursor: pointer;
-            color: #aaa;
         }
-
         @media (max-width: 680px) {
             .hero h1 { font-size: 1.9rem; }
             .logo { font-size: 2.8rem; }
-            .slogan { font-size: 0.9rem; }
-            .grid-trailers, .grid-imagens {
-                grid-template-columns: 1fr;
-            }
-            .preco {
-                font-size: 1.5rem;
-                white-space: normal;
-            }
-            .preco small {
-                font-size: 0.7rem;
-                white-space: normal;
-                display: inline-block;
-            }
+            .free-trial-card h2 { font-size: 1.8rem; }
+            .free-trial-card .hours { font-size: 2.8rem; }
+            .indication-banner { flex-direction: column; text-align: center; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Banner principal com imagem de fundo -->
-    <section class="hero">
-        <div class="logo">MPLAY</div>
-        <div class="slogan"><i class="fas fa-infinity"></i> Onde o entretenimento não tem limites</div>
-        <h1>IPTV de alta definição <br> + Milhares de canais, filmes, séries e jogos</h1>
-        <p>Assista onde quiser, na sua TV, celular ou computador. Qualidade 4K, sem travamentos e com o melhor preço.</p>
-        <button class="btn-whatsapp" id="heroWhatsBtn"><i class="fab fa-whatsapp"></i> Fale conosco no WhatsApp</button>
-    </section>
+<section class="hero">
+    <div class="logo">MPLAY</div>
+    <div class="slogan"><i class="fas fa-infinity"></i> Onde o entretenimento não tem limites</div>
+    <h1>IPTV de alta definição <br> + Milhares de canais, filmes, séries e jogos</h1>
+    <p>Assista onde quiser, na sua TV, celular ou computador. Qualidade 4K, sem travamentos e com o melhor preço.</p>
+    <button class="btn-whatsapp" id="heroWhatsBtn"><i class="fab fa-whatsapp"></i> Fale conosco no WhatsApp</button>
+</section>
 
-    <!-- Seção Roleta de Trailers -->
-    <section class="grade-section">
-        <div class="container">
-            <div class="section-title"><i class="fas fa-play-circle"></i> Roleta de Trailers</div>
-            <div class="grid-trailers">
-                <div class="trailer-card">
-                    <div class="video-container">
-                        <iframe src="https://www.youtube.com/embed/XE463FS4CvQ" 
-                                title="CAMINHOS DO CRIME Trailer Dublado (2026) Chris Hemsworth, Mark Ruffalo" 
-                                frameborder="0" 
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen" 
-                                allowfullscreen></iframe>
-                    </div>
-                    <div class="trailer-info">
-                        <h3><i class="fab fa-youtube"></i>CAMINHOS DO CRIME Trailer Dublado (2026) Chris Hemsworth, Mark Ruffalo</h3>
-                        <div class="play-hint"><i class="fas fa-play-circle"></i> Clique no PLAY e assista ao trailer</div>
-                    </div>
-                </div>
-                <div class="trailer-card">
-                    <div class="video-container">
-                        <iframe src="https://www.youtube.com/embed/P_-r11fcDTc" 
-                                title="Peaky Blinders: O Homem Imortal" 
-                                frameborder="0" 
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen" 
-                                allowfullscreen></iframe>
-                    </div>
-                    <div class="trailer-info">
-                        <h3><i class="fab fa-youtube"></i> Peaky Blinders: O Homem Imortal | Trailer oficial | Netflix</h3>
-                        <div class="play-hint"><i class="fas fa-play-circle"></i> Clique no PLAY e assista ao trailer</div>
-                    </div>
-                </div>
-                <div class="trailer-card">
-                    <div class="video-container">
-                        <iframe src="https://www.youtube.com/embed/YEIbjkIlx2M" 
-                                title="O JUSTICEIRO: Uma Última Morte" 
-                                frameborder="0" 
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen" 
-                                allowfullscreen></iframe>
-                    </div>
-                    <div class="trailer-info">
-                        <h3><i class="fab fa-youtube"></i> O JUSTICEIRO: Uma Última Morte Trailer Dublado (2026) Jon Bernthal</h3>
-                        <div class="play-hint"><i class="fas fa-play-circle"></i> Clique no PLAY e assista ao trailer</div>
-                    </div>
-                </div>
-            </div>
+<!-- CARD DE TESTE GRÁTIS EM DESTAQUE (conforme solicitado) -->
+<div class="container" style="margin-top: -50px; position: relative; z-index: 5;">
+    <div class="free-trial-card">
+        <div class="badge-free"><i class="fas fa-gift"></i> OFERTA ESPECIAL</div>
+        <h2>VOCÊ GANHOU</h2>
+        <div class="hours">5 HORAS GRÁTIS</div>
+        <p><strong>CANAIS + FILMES + SÉRIES</strong><br>
+        Assista os melhores lançamentos de filmes, acompanhe a partida do seu time do coração, curta qualquer evento ao vivo que você quiser.</p>
+        <button class="btn-free-trial" id="freeTrialBtn"><i class="fas fa-play-circle"></i> PEÇA JÁ O SEU TESTE GRÁTIS</button>
+        <p style="font-size: 0.7rem; margin-top: 12px;">✅ Sem compromisso | ✅ Ativação imediata</p>
+    </div>
+</div>
+
+<!-- ANÚNCIO INDICAÇÃO: GANHE 1 MÊS GRÁTIS (como na imagem em anexo) -->
+<div class="container">
+    <div class="indication-banner">
+        <div class="indication-text">
+            <h3><i class="fas fa-user-friends"></i> INDICAÇÃO PREMIADA!</h3>
+            <p><strong>Indique um amigo para a Mplay e ganhe 1 MÊS GRÁTIS</strong> para você! Quanto mais amigos, mais meses. Sem limites, aproveite essa promoção imperdível.</p>
+            <p><i class="fas fa-check-circle" style="color:#25D366;"></i> Seu amigo ainda ganha 10% de desconto no primeiro plano.</p>
         </div>
-    </section>
+        <button class="indication-btn" id="indicateBtn"><i class="fab fa-whatsapp"></i> Indique agora e ganhe</button>
+    </div>
+</div>
 
-    <!-- Grade de catálogo em destaque -->
-    <section class="grade-section" style="background: #0a0c12;">
-        <div class="container">
-            <div class="section-title">🔥 Catálogo em Destaque</div>
-            <div class="grid-imagens">
-                <div class="card-media">
-                    <img src="https://i.pinimg.com/originals/5a/fb/cf/5afbcffa1f7b725cc036d6180b184645.jpg" alt="Pantera Negra">
-                    <div class="info"><i class="fas fa-paw"></i> Pantera Negra</div>
-                </div>
-                <div class="card-media">
-                    <img src="https://www.anymp4.com/images/blu-ray/4k-blu-ray-movies/4k-blu-ray-movies-alita.jpg" alt="Alita">
-                    <div class="info"><i class="fas fa-robot"></i> Alita: Anjo de Combate</div>
-                </div>
-                <div class="card-media">
-                    <img src="https://a-static.besthdwallpaper.com/spider-man-ps5-game-wallpaper-2560x1600-106417_7.jpg" alt="Spider-Man">
-                    <div class="info"><i class="fas fa-spider"></i> Spider-Man</div>
-                </div>
-                <div class="card-media">
-                    <img src="https://marcaspelomundo.com.br/wp-content/uploads/2024/09/8d8589005077b776bf251bbe20ba5380.png" alt="UEFA Champions League">
-                    <div class="info"><i class="fas fa-trophy"></i> UEFA Champions League</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Planos de Assinatura -->
-    <section class="planos">
-        <div class="container">
-            <div class="section-title">📺 Escolha seu plano Mplay</div>
-            <div class="cards-planos">
-                <!-- Plano Mensal -->
-                <div class="plano">
-                    <h3>Mensal</h3>
-                    <div class="preco">R$ 29,99<span style="font-size:0.85rem; font-weight:400; color:#aaa;">/mês</span></div>
-                    <ul>
-                        <li><i class="fas fa-check-circle"></i> Acesso completo</li>
-                        <li><i class="fas fa-check-circle"></i> Canais + Filmes + Séries</li>
-                        <li><i class="fas fa-check-circle"></i> Suporte 24h</li>
-                        <li><i class="fas fa-check-circle"></i> Sem fidelidade</li>
-                    </ul>
-                    <button class="btn-plano" data-plano="Mensal - R$29,99">Assinar agora</button>
-                </div>
-                <!-- Plano Trimestral -->
-                <div class="plano">
-                    <h3>Trimestral</h3>
-                    <div class="preco">R$ 79,99<span style="font-size:0.85rem; font-weight:400; color:#aaa;">/3 meses</span></div>
-                    <ul>
-                        <li><i class="fas fa-check-circle"></i> 3 meses por apenas R$79,99</li>
-                        <li><i class="fas fa-check-circle"></i> Economia de 15%</li>
-                        <li><i class="fas fa-check-circle"></i> 4K Ultra HD</li>
-                        <li><i class="fas fa-check-circle"></i> Conteúdo exclusivo</li>
-                    </ul>
-                    <button class="btn-plano" data-plano="Trimestral - R$79,99">Assinar agora</button>
-                </div>
-                <!-- Plano Semestral -->
-                <div class="plano">
-                    <h3>Semestral</h3>
-                    <div class="preco">R$ 149,99<span style="font-size:0.85rem; font-weight:400; color:#aaa;">/6 meses</span></div>
-                    <ul>
-                        <li><i class="fas fa-check-circle"></i> 6 meses por apenas R$149,99</li>
-                        <li><i class="fas fa-check-circle"></i> Economia de 20%</li>
-                        <li><i class="fas fa-check-circle"></i> 4K Ultra HD</li>
-                        <li><i class="fas fa-check-circle"></i> Conteúdo exclusivo</li>
-                    </ul>
-                    <button class="btn-plano" data-plano="Semestral - R$149,99">Assinar agora</button>
-                </div>
-                <!-- Plano Anual -->
-                <div class="plano">
-                    <h3>Anual <span style="font-size:0.7rem; background:#ff4d4d; padding:2px 8px; border-radius:40px;">MAIS ECONÔMICO</span></h3>
-                    <div class="preco">R$ 279,99<span style="font-size:0.85rem; font-weight:400; color:#aaa;">/12 meses</span></div>
-                    <ul>
-                        <li><i class="fas fa-check-circle"></i> 12 meses por apenas R$279,99</li>
-                        <li><i class="fas fa-check-circle"></i> 2 meses grátis</li>
-                        <li><i class="fas fa-check-circle"></i> Acesso VIP a jogos e eventos</li>
-                        <li><i class="fas fa-check-circle"></i> Prioridade no suporte</li>
-                    </ul>
-                    <button class="btn-plano" data-plano="Anual - R$279,99">Assinar agora</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Rodapé com Logo Redonda -->
-    <div class="footer">
-        <img src="logolb.png" alt="Suporte Técnico" class="footer-logo" onerror="this.src='https://placehold.co/60x60/ff4d4d/white?text=Logo'">
-        <div class="footer-text">
-            <p><i class="fas fa-trademark"></i> Mplay IPTV - Entretenimento sem fronteiras | Todos os direitos reservados</p>
-            <p style="margin-top: 5px;">Suporte Técnico - LB BUILDING DIGITAL SOLUTIONS</p>
+<!-- Trailers -->
+<section class="grade-section">
+    <div class="container">
+        <div class="section-title"><i class="fas fa-play-circle"></i> Roleta de Trailers</div>
+        <div class="grid-trailers">
+            <div class="trailer-card"><div class="video-container"><iframe src="https://www.youtube.com/embed/XE463FS4CvQ" title="CAMINHOS DO CRIME" allowfullscreen></iframe></div><div class="trailer-info"><h3><i class="fab fa-youtube"></i>CAMINHOS DO CRIME (2026)</h3></div></div>
+            <div class="trailer-card"><div class="video-container"><iframe src="https://www.youtube.com/embed/P_-r11fcDTc" title="Peaky Blinders" allowfullscreen></iframe></div><div class="trailer-info"><h3><i class="fab fa-youtube"></i> Peaky Blinders: O Homem Imortal</h3></div></div>
+            <div class="trailer-card"><div class="video-container"><iframe src="https://www.youtube.com/embed/YEIbjkIlx2M" title="O JUSTICEIRO" allowfullscreen></iframe></div><div class="trailer-info"><h3><i class="fab fa-youtube"></i> O JUSTICEIRO: Uma Última Morte</h3></div></div>
         </div>
     </div>
+</section>
 
-    <!-- Botão flutuante WhatsApp -->
-    <div class="whatsapp-float" id="whatsFloatBtn">
-        <i class="fab fa-whatsapp"></i>
+<!-- Catálogo em Destaque -->
+<section class="grade-section" style="background: #0a0c12;">
+    <div class="container">
+        <div class="section-title">🔥 Catálogo em Destaque</div>
+        <div class="grid-imagens">
+            <div class="card-media"><img src="https://i.pinimg.com/originals/5a/fb/cf/5afbcffa1f7b725cc036d6180b184645.jpg" alt="Pantera Negra"><div class="info"><i class="fas fa-paw"></i> Pantera Negra</div></div>
+            <div class="card-media"><img src="https://www.anymp4.com/images/blu-ray/4k-blu-ray-movies/4k-blu-ray-movies-alita.jpg" alt="Alita"><div class="info"><i class="fas fa-robot"></i> Alita: Anjo de Combate</div></div>
+            <div class="card-media"><img src="https://a-static.besthdwallpaper.com/spider-man-ps5-game-wallpaper-2560x1600-106417_7.jpg" alt="Spider-Man"><div class="info"><i class="fas fa-spider"></i> Spider-Man</div></div>
+            <div class="card-media"><img src="https://marcaspelomundo.com.br/wp-content/uploads/2024/09/8d8589005077b776bf251bbe20ba5380.png" alt="UEFA"><div class="info"><i class="fas fa-trophy"></i> UEFA Champions League</div></div>
+        </div>
     </div>
+</section>
 
-    <!-- Modal de contato WhatsApp -->
-    <div id="modalWpp" class="modal-wpp">
-        <div class="close-modal" id="closeModalBtn">&times;</div>
-        <h4><i class="fab fa-whatsapp"></i> Fale com a Mplay</h4>
-        <input type="text" id="nomeContato" placeholder="Seu nome" value="">
-        <textarea id="msgContato" rows="2" placeholder="Digite sua mensagem... Ex: Quero o plano anual!"></textarea>
-        <button id="enviarWhatsSimulado">Enviar mensagem <i class="fab fa-whatsapp"></i></button>
-        <small style="display:block; margin-top:6px; font-size:10px; text-align:center;">💬 Você será redirecionado ao WhatsApp oficial</small>
+<!-- Planos de Assinatura -->
+<section class="planos">
+    <div class="container">
+        <div class="section-title">📺 Escolha seu plano Mplay</div>
+        <div class="cards-planos">
+            <div class="plano"><h3>Mensal</h3><div class="preco">R$ 29,99<span style="font-size:0.85rem;">/mês</span></div><ul><li><i class="fas fa-check-circle"></i> Acesso completo</li><li><i class="fas fa-check-circle"></i> Canais + Filmes</li><li><i class="fas fa-check-circle"></i> Suporte 24h</li></ul><button class="btn-plano" data-plano="Mensal - R$29,99">Assinar agora</button></div>
+            <div class="plano"><h3>Trimestral</h3><div class="preco">R$ 79,99<span style="font-size:0.85rem;">/3 meses</span></div><ul><li><i class="fas fa-check-circle"></i> Economia 15%</li><li><i class="fas fa-check-circle"></i> 4K Ultra HD</li><li><i class="fas fa-check-circle"></i> Conteúdo exclusivo</li></ul><button class="btn-plano" data-plano="Trimestral - R$79,99">Assinar agora</button></div>
+            <div class="plano"><h3>Semestral</h3><div class="preco">R$ 149,99<span style="font-size:0.85rem;">/6 meses</span></div><ul><li><i class="fas fa-check-circle"></i> 6 meses c/ desconto</li><li><i class="fas fa-check-circle"></i> 4K + Eventos</li><li><i class="fas fa-check-circle"></i> Canais premium</li></ul><button class="btn-plano" data-plano="Semestral - R$149,99">Assinar agora</button></div>
+            <div class="plano"><h3>Anual <span style="font-size:0.7rem; background:#ff4d4d; padding:2px 8px; border-radius:40px;">MAIS ECONÔMICO</span></h3><div class="preco">R$ 279,99<span style="font-size:0.85rem;">/12 meses</span></div><ul><li><i class="fas fa-check-circle"></i> 2 meses grátis</li><li><i class="fas fa-check-circle"></i> Acesso VIP</li><li><i class="fas fa-check-circle"></i> Prioridade suporte</li></ul><button class="btn-plano" data-plano="Anual - R$279,99">Assinar agora</button></div>
+        </div>
     </div>
+</section>
 
-    <script>
-        // Número do WhatsApp atualizado
-        const WHATSAPP_NUMBER = "557192871534";
+<footer class="footer">
+    <img src="logolb.png" alt="Suporte Técnico" class="footer-logo" onerror="this.src='https://placehold.co/60x60/ff4d4d/white?text=Logo'">
+    <p><i class="fas fa-trademark"></i> Mplay IPTV - Entretenimento sem fronteiras | Suporte Técnico - LB BUILDING DIGITAL SOLUTIONS</p>
+</footer>
 
-        // Pegando elementos
-        const heroWhats = document.getElementById('heroWhatsBtn');
-        const floatBtn = document.getElementById('whatsFloatBtn');
-        const modal = document.getElementById('modalWpp');
-        const closeModal = document.getElementById('closeModalBtn');
-        const enviarBtn = document.getElementById('enviarWhatsSimulado');
-        const botoesPlanos = document.querySelectorAll('.btn-plano');
+<div class="whatsapp-float" id="whatsFloatBtn"><i class="fab fa-whatsapp"></i></div>
+<div id="modalWpp" class="modal-wpp"><div class="close-modal" id="closeModalBtn">&times;</div><h4><i class="fab fa-whatsapp"></i> Fale com a Mplay</h4><input type="text" id="nomeContato" placeholder="Seu nome"><textarea id="msgContato" rows="2" placeholder="Digite sua mensagem..."></textarea><button id="enviarWhatsSimulado">Enviar mensagem <i class="fab fa-whatsapp"></i></button><small style="display:block; margin-top:6px; font-size:10px; text-align:center;">💬 Você será redirecionado ao WhatsApp oficial</small></div>
 
-        // Abrir modal
-        function abrirModalWhats() {
-            modal.classList.add('active');
-        }
+<script>
+    const WHATSAPP_NUMBER = "557192871534";
+    const modal = document.getElementById('modalWpp');
+    const closeModalBtn = document.getElementById('closeModalBtn');
+    const heroWhatsBtn = document.getElementById('heroWhatsBtn');
+    const floatBtn = document.getElementById('whatsFloatBtn');
+    const enviarBtn = document.getElementById('enviarWhatsSimulado');
+    const botoesPlanos = document.querySelectorAll('.btn-plano');
+    const freeTrialBtn = document.getElementById('freeTrialBtn');
+    const indicateBtn = document.getElementById('indicateBtn');
 
-        function fecharModal() {
-            modal.classList.remove('active');
-        }
+    function abrirModal() { modal.classList.add('active'); }
+    function fecharModal() { modal.classList.remove('active'); }
 
-        // Eventos para abrir modal
-        heroWhats.addEventListener('click', abrirModalWhats);
-        floatBtn.addEventListener('click', abrirModalWhats);
-        closeModal.addEventListener('click', fecharModal);
+    heroWhatsBtn.addEventListener('click', abrirModal);
+    floatBtn.addEventListener('click', abrirModal);
+    closeModalBtn.addEventListener('click', fecharModal);
+    window.addEventListener('click', (e) => { if(e.target === modal) fecharModal(); });
+    window.addEventListener('keydown', (e) => { if(e.key === 'Escape' && modal.classList.contains('active')) fecharModal(); });
 
-        // Clicar fora do modal fechar
-        window.addEventListener('click', (e) => {
-            if (e.target === modal) {
-                fecharModal();
-            }
-        });
-
-        // Função de envio para WhatsApp com número real
-        function enviarWhatsAppMensagem(planoInfo = null) {
-            let nome = document.getElementById('nomeContato').value.trim();
+    function enviarWhats(planoInfo = null, customMsg = null) {
+        let nome = document.getElementById('nomeContato').value.trim();
+        if (nome === "") nome = "Cliente Mplay";
+        let texto = "";
+        if (customMsg) {
+            texto = customMsg;
+        } else if (planoInfo) {
+            texto = `Olá, sou ${nome}, vim pelo site Mplay. Gostaria de assinar o plano ${planoInfo}.`;
+        } else {
             let mensagem = document.getElementById('msgContato').value.trim();
-
-            if (nome === "") nome = "Cliente Mplay";
-            let textoBase = `Olá, sou ${nome}, vim pelo site Mplay. `;
-            if (planoInfo) {
-                textoBase += `Gostaria de assinar o plano ${planoInfo}. `;
-            }
-            if (mensagem !== "") {
-                textoBase += `Detalhes: ${mensagem}`;
-            } else {
-                textoBase += `Quero mais informações sobre os planos.`;
-            }
-
-            const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(textoBase)}`;
-            window.open(url, '_blank');
-            fecharModal();
-            document.getElementById('msgContato').value = '';
-            document.getElementById('nomeContato').value = '';
+            texto = `Olá, sou ${nome}, vim pelo site Mplay. ${mensagem ? mensagem : "Quero mais informações sobre os planos."}`;
         }
+        const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(texto)}`;
+        window.open(url, '_blank');
+        fecharModal();
+        if(!customMsg) document.getElementById('msgContato').value = '';
+        document.getElementById('nomeContato').value = '';
+    }
 
-        // Envio manual via botão do modal
-        enviarBtn.addEventListener('click', () => {
-            enviarWhatsAppMensagem(null);
+    enviarBtn.addEventListener('click', () => { enviarWhats(null, null); });
+
+    botoesPlanos.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const planoNome = btn.getAttribute('data-plano');
+            const msgArea = document.getElementById('msgContato');
+            msgArea.value = `Tenho interesse no plano ${planoNome}. Quero assinar agora!`;
+            abrirModal();
+            document.getElementById('nomeContato').focus();
         });
+    });
 
-        // Configurar cada botão de plano
-        botoesPlanos.forEach(btn => {
-            btn.addEventListener('click', (e) => {
-                const planoNome = btn.getAttribute('data-plano');
-                const msgArea = document.getElementById('msgContato');
-                msgArea.value = `Tenho interesse no plano ${planoNome}. Quero assinar agora!`;
-                abrirModalWhats();
-                document.getElementById('nomeContato').focus();
-            });
-        });
+    // AÇÃO DO BOTÃO DE TESTE GRÁTIS (destaque)
+    freeTrialBtn.addEventListener('click', () => {
+        const msgCustom = `Olá! Gostaria de solicitar meu TESTE GRÁTIS de 5 HORAS no Mplay. Tenho interesse em conhecer canais, filmes e séries. Aguardo contato!`;
+        enviarWhats(null, msgCustom);
+    });
 
-        // Animação nos cards de trailer e catálogo
-        const cards = document.querySelectorAll('.trailer-card, .card-media');
-        cards.forEach((card, idx) => {
-            card.style.opacity = '0';
-            card.style.transform = 'translateY(20px)';
-            setTimeout(() => {
-                card.style.transition = 'all 0.5s ease';
-                card.style.opacity = '1';
-                card.style.transform = 'translateY(0)';
-            }, idx * 100);
-        });
+    // AÇÃO DO BOTÃO DE INDICAÇÃO (ganhe 1 mês grátis)
+    indicateBtn.addEventListener('click', () => {
+        const msgIndicacao = `Olá! Quero participar da promoção INDICAR E GANHAR 1 MÊS GRÁTIS. Tenho amigos que desejam assinar a Mplay. Me explique como funciona a indicação e os benefícios.`;
+        enviarWhats(null, msgIndicacao);
+    });
 
-        // Efeito nos planos ao entrar na tela
-        const planosCard = document.querySelectorAll('.plano');
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'scale(1)';
-                }
-            });
-        }, { threshold: 0.2 });
-        planosCard.forEach(p => {
-            p.style.opacity = '0';
-            p.style.transform = 'scale(0.95)';
-            p.style.transition = 'all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1)';
-            observer.observe(p);
-        });
-
-        // Fechar modal com ESC
-        window.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && modal.classList.contains('active')) {
-                fecharModal();
+    // Animações de entrada
+    const cards = document.querySelectorAll('.trailer-card, .card-media');
+    cards.forEach((card, idx) => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(20px)';
+        setTimeout(() => {
+            card.style.transition = 'all 0.5s ease';
+            card.style.opacity = '1';
+            card.style.transform = 'translateY(0)';
+        }, idx * 100);
+    });
+    const planosObs = document.querySelectorAll('.plano');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if(entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'scale(1)';
             }
         });
-    </script>
+    }, { threshold: 0.2 });
+    planosObs.forEach(p => { p.style.opacity = '0'; p.style.transform = 'scale(0.95)'; p.style.transition = 'all 0.4s'; observer.observe(p); });
+</script>
 </body>
 </html>
