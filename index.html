@@ -506,25 +506,6 @@
             color: #25D366;
         }
 
-        .btn-plano {
-            background: #ff4d4d;
-            border: none;
-            color: white;
-            padding: 0.8rem 1rem;
-            border-radius: 40px;
-            font-weight: bold;
-            width: 100%;
-            cursor: pointer;
-            transition: 0.2s;
-            font-size: 0.95rem;
-        }
-
-        .btn-plano:hover {
-            background: #e03a3a;
-            transform: scale(0.98);
-            box-shadow: 0 5px 12px rgba(255, 77, 77, 0.5);
-        }
-
         .badge {
             font-size: 0.7rem;
             background: #ff4d4d;
@@ -532,6 +513,33 @@
             border-radius: 40px;
             display: inline-block;
             margin-left: 5px;
+        }
+
+        /* Botão único de assinatura */
+        .btn-assinar-unico {
+            background: linear-gradient(135deg, #ff4d4d, #b71c1c);
+            color: white;
+            border: none;
+            padding: 1rem 2.5rem;
+            font-size: 1.2rem;
+            font-weight: 700;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            margin-top: 3rem;
+            box-shadow: 0 8px 25px rgba(255, 77, 77, 0.4);
+        }
+
+        .btn-assinar-unico:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 15px 35px rgba(255, 77, 77, 0.6);
+        }
+
+        .btn-assinar-wrapper {
+            text-align: center;
         }
 
         /* Seção Suporte Técnico */
@@ -937,48 +945,47 @@
             <div class="cards-planos">
                 <div class="plano">
                     <h3>Mensal</h3>
-                    <div class="preco">R$ 29,99<small>/mês</small></div>
+                    <div class="preco">R$ 30,00<small>/mês</small></div>
                     <ul>
                         <li><i class="fas fa-check-circle"></i> Acesso completo</li>
                         <li><i class="fas fa-check-circle"></i> Canais + Filmes + Séries</li>
                         <li><i class="fas fa-check-circle"></i> Suporte 24h</li>
                         <li><i class="fas fa-check-circle"></i> Sem fidelidade</li>
                     </ul>
-                    <button class="btn-plano" data-plano="Mensal - R$29,99">Assinar agora</button>
                 </div>
                 <div class="plano">
                     <h3>Trimestral</h3>
-                    <div class="preco">R$ 79,99<small>/3 meses</small></div>
+                    <div class="preco">R$ 85,00<small>/3 meses</small></div>
                     <ul>
-                        <li><i class="fas fa-check-circle"></i> 3 meses por R$79,99</li>
-                        <li><i class="fas fa-check-circle"></i> Economia de 15%</li>
+                        <li><i class="fas fa-check-circle"></i> 3 meses por R$85,00</li>
+                        <li><i class="fas fa-check-circle"></i> Economia de 5%</li>
                         <li><i class="fas fa-check-circle"></i> 4K Ultra HD</li>
                         <li><i class="fas fa-check-circle"></i> Conteúdo exclusivo</li>
                     </ul>
-                    <button class="btn-plano" data-plano="Trimestral - R$79,99">Assinar agora</button>
                 </div>
                 <div class="plano">
                     <h3>Semestral</h3>
-                    <div class="preco">R$ 149,99<small>/6 meses</small></div>
+                    <div class="preco">R$ 160,00<small>/6 meses</small></div>
                     <ul>
-                        <li><i class="fas fa-check-circle"></i> 6 meses por R$149,99</li>
-                        <li><i class="fas fa-check-circle"></i> Economia de 20%</li>
+                        <li><i class="fas fa-check-circle"></i> 6 meses por R$160,00</li>
+                        <li><i class="fas fa-check-circle"></i> Economia de 10%</li>
                         <li><i class="fas fa-check-circle"></i> 4K Ultra HD</li>
                         <li><i class="fas fa-check-circle"></i> Conteúdo exclusivo</li>
                     </ul>
-                    <button class="btn-plano" data-plano="Semestral - R$149,99">Assinar agora</button>
                 </div>
                 <div class="plano">
                     <h3>Anual <span class="badge">MAIS ECONÔMICO</span></h3>
-                    <div class="preco">R$ 279,99<small>/12 meses</small></div>
+                    <div class="preco">R$ 240,00<small>/12 meses</small></div>
                     <ul>
-                        <li><i class="fas fa-check-circle"></i> 12 meses por R$279,99</li>
+                        <li><i class="fas fa-check-circle"></i> 12 meses por R$240,00</li>
                         <li><i class="fas fa-check-circle"></i> 2 meses grátis</li>
                         <li><i class="fas fa-check-circle"></i> Acesso VIP a jogos</li>
                         <li><i class="fas fa-check-circle"></i> Prioridade no suporte</li>
                     </ul>
-                    <button class="btn-plano" data-plano="Anual - R$279,99">Assinar agora</button>
                 </div>
+            </div>
+            <div class="btn-assinar-wrapper">
+                <button class="btn-assinar-unico" id="btnAssinarUnico"><i class="fab fa-whatsapp"></i> Assinar Agora</button>
             </div>
         </div>
     </section>
@@ -1030,7 +1037,7 @@
         <div class="close-modal" id="closeModalBtn">&times;</div>
         <h4><i class="fab fa-whatsapp"></i> Fale com a Mplay</h4>
         <input type="text" id="nomeContato" placeholder="Seu nome" value="">
-        <textarea id="msgContato" rows="2" placeholder="Digite sua mensagem... Ex: Quero o plano anual!"></textarea>
+        <textarea id="msgContato" rows="2" placeholder="Digite sua mensagem... Ex: Quero assinar o plano anual!"></textarea>
         <button id="enviarWhatsSimulado">Enviar mensagem <i class="fab fa-whatsapp"></i></button>
         <small style="display:block; margin-top:6px; font-size:10px; text-align:center;">💬 Você será redirecionado ao WhatsApp oficial</small>
     </div>
@@ -1038,18 +1045,18 @@
     <script>
         // NÚMEROS DE WHATSAPP
         const WHATSAPP_VENDAS = "557192515888";
-        const WHATSAPP_SUPORTE = "557192515888";
-        const WHATSAPP_INDICACAO = "557192871534"; // Indicação vai para o mesmo do suporte
+        const WHATSAPP_SUPORTE = "557192871534";
+        const WHATSAPP_INDICACAO = "557192871534";
 
         const heroWhats = document.getElementById('heroWhatsBtn');
         const floatBtn = document.getElementById('whatsFloatBtn');
         const testeBtn = document.getElementById('testeBtn');
         const suporteBtn = document.getElementById('suporteBtn');
         const indicacaoBtn = document.getElementById('indicacaoBtn');
+        const btnAssinarUnico = document.getElementById('btnAssinarUnico');
         const modal = document.getElementById('modalWpp');
         const closeModal = document.getElementById('closeModalBtn');
         const enviarBtn = document.getElementById('enviarWhatsSimulado');
-        const botoesPlanos = document.querySelectorAll('.btn-plano');
 
         function abrirModalWhats() {
             modal.classList.add('active');
@@ -1061,25 +1068,23 @@
 
         heroWhats.addEventListener('click', abrirModalWhats);
         floatBtn.addEventListener('click', abrirModalWhats);
+        btnAssinarUnico.addEventListener('click', abrirModalWhats);
         closeModal.addEventListener('click', fecharModal);
 
         window.addEventListener('click', (e) => {
             if (e.target === modal) fecharModal();
         });
 
-        function enviarWhatsAppVendas(planoInfo = null, mensagemPersonalizada = null) {
+        function enviarWhatsAppVendas(mensagemPersonalizada = null) {
             let nome = document.getElementById('nomeContato').value.trim();
             let mensagem = mensagemPersonalizada || document.getElementById('msgContato').value.trim();
 
             if (nome === "") nome = "Cliente Mplay";
             let textoBase = `Olá, sou ${nome}, vim pelo site Mplay. `;
-            if (planoInfo) {
-                textoBase += `Gostaria de assinar o plano ${planoInfo}. `;
-            }
             if (mensagem !== "") {
                 textoBase += `Detalhes: ${mensagem}`;
             } else {
-                textoBase += `Quero mais informações sobre os planos.`;
+                textoBase += `Quero mais informações sobre os planos de assinatura.`;
             }
 
             const url = `https://wa.me/${WHATSAPP_VENDAS}?text=${encodeURIComponent(textoBase)}`;
@@ -1091,16 +1096,6 @@
 
         enviarBtn.addEventListener('click', () => {
             enviarWhatsAppVendas();
-        });
-
-        botoesPlanos.forEach(btn => {
-            btn.addEventListener('click', (e) => {
-                const planoNome = btn.getAttribute('data-plano');
-                const msgArea = document.getElementById('msgContato');
-                msgArea.value = `Tenho interesse no plano ${planoNome}. Quero assinar agora!`;
-                abrirModalWhats();
-                document.getElementById('nomeContato').focus();
-            });
         });
 
         testeBtn.addEventListener('click', () => {
