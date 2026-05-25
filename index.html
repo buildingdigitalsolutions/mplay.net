@@ -100,7 +100,11 @@
             box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
         }
 
-        /* Seção Dispositivos */
+        .btn-whatsapp:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(37, 211, 102, 0.6);
+        }
+
         .dispositivos-section {
             padding: 3rem 1.5rem;
             background: #0f111a;
@@ -271,7 +275,7 @@
             background: #1e2130;
         }
 
-        /* PLANOS COM EFEITO 3D */
+        /* PLANOS COM EFEITO 3D - SEM BOTÕES INDIVIDUAIS */
         .planos {
             padding: 3rem 1.5rem;
             background: #0a0c12;
@@ -349,23 +353,6 @@
             color: #25D366;
         }
 
-        .btn-assinar {
-            background: linear-gradient(135deg, #ff4d4d, #c53030);
-            color: white;
-            border: none;
-            padding: 0.8rem 1.2rem;
-            border-radius: 40px;
-            font-weight: bold;
-            width: 100%;
-            cursor: pointer;
-            transition: all 0.2s;
-        }
-
-        .btn-assinar:hover {
-            transform: scale(0.98);
-            box-shadow: 0 5px 15px rgba(255, 77, 77, 0.4);
-        }
-
         .badge {
             font-size: 0.65rem;
             background: #ff4d4d;
@@ -393,6 +380,12 @@
             align-items: center;
             gap: 12px;
             box-shadow: 0 8px 25px rgba(255, 77, 77, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .btn-assinar-grande:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(255, 77, 77, 0.6);
         }
 
         /* Indicação Premiada */
@@ -426,6 +419,12 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
+            transition: all 0.2s;
+        }
+
+        .btn-indicacao:hover, .btn-suporte:hover {
+            transform: scale(1.02);
+            background: #1da853;
         }
 
         .suporte-card {
@@ -469,6 +468,12 @@
             gap: 10px;
             text-decoration: none;
             font-weight: bold;
+            transition: all 0.2s;
+        }
+
+        .btn-franquiado:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(255, 77, 77, 0.4);
         }
 
         .footer {
@@ -504,6 +509,12 @@
             cursor: pointer;
             z-index: 99;
             box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            transition: all 0.2s;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            background: #1da853;
         }
 
         @media (max-width: 680px) {
@@ -566,7 +577,7 @@
         </div>
     </section>
 
-    <!-- PLANOS COM EFEITO 3D -->
+    <!-- PLANOS COM EFEITO 3D - SEM BOTÕES INDIVIDUAIS -->
     <section class="planos">
         <div class="section-title">📺 Escolha seu plano Mplay</div>
         <div class="cards-planos">
@@ -579,7 +590,6 @@
                     <li><i class="fas fa-check-circle"></i> Canais + Filmes + Séries</li>
                     <li><i class="fas fa-check-circle"></i> Suporte 24h</li>
                 </ul>
-                <button class="btn-assinar" data-plano="Mensal">Assinar agora</button>
             </div>
             <div class="plano">
                 <h3>Trimestral</h3>
@@ -590,7 +600,6 @@
                     <li><i class="fas fa-check-circle"></i> Conteúdo exclusivo</li>
                     <li><i class="fas fa-check-circle"></i> Suporte prioritário</li>
                 </ul>
-                <button class="btn-assinar" data-plano="Trimestral">Assinar agora</button>
             </div>
             <div class="plano destaque">
                 <h3>Semestral ⭐</h3>
@@ -601,7 +610,6 @@
                     <li><i class="fas fa-check-circle"></i> Acesso a eventos ao vivo</li>
                     <li><i class="fas fa-check-circle"></i> Canais premium liberados</li>
                 </ul>
-                <button class="btn-assinar" data-plano="Semestral">Assinar agora</button>
             </div>
             <div class="plano">
                 <h3>Anual <span class="badge">MAIS ECONÔMICO</span></h3>
@@ -612,7 +620,6 @@
                     <li><i class="fas fa-check-circle"></i> Acesso VIP eventos</li>
                     <li><i class="fas fa-check-circle"></i> Suporte prioritário 24/7</li>
                 </ul>
-                <button class="btn-assinar" data-plano="Anual">Assinar agora</button>
             </div>
         </div>
         <div class="btn-assinar-principal">
@@ -647,6 +654,7 @@
         <div class="franquiado-destaques">
             <span class="destaque-item"><i class="fas fa-graduation-cap"></i> Treinamento gratuito</span>
             <span class="destaque-item"><i class="fas fa-headset"></i> Suporte completo</span>
+            <span class="destaque-item"><i class="fas fa-chart-line"></i> Comissões atrativas</span>
         </div>
         <a href="https://painelcinecompany.online/#/rs/4vLbAXg1gG/7loL7nZ1XM" target="_blank" class="btn-franquiado"><i class="fas fa-store"></i> Quero ser Franqueado</a>
     </section>
@@ -688,13 +696,6 @@
             "Fala! Me falaram muito bem da Mplay. Quero saber mais sobre os planos e valores."
         ];
 
-        const mensagensPorPlano = {
-            "Mensal": "Olá! Quero assinar o plano MENSAL da Mplay (R$30/mês). Como faço para contratar e ativar?",
-            "Trimestral": "Olá! Quero assinar o plano TRIMESTRAL da Mplay (R$85/3 meses). Me passe as instruções de pagamento.",
-            "Semestral": "Olá! Quero assinar o plano SEMESTRAL da Mplay (R$160/6 meses). Melhor custo-benefício!",
-            "Anual": "Olá! Quero assinar o plano ANUAL da Mplay (R$240/12 meses). Quero suporte prioritário!"
-        };
-
         const mensagensSuporte = [
             "Olá! Preciso de suporte técnico para instalar o aplicativo da Mplay na minha TV. Pode me ajudar?",
             "Fala! Estou com dificuldade para ativar minha assinatura da Mplay. Alguém me auxilia?",
@@ -713,13 +714,8 @@
             return arr[Math.floor(Math.random() * arr.length)];
         }
 
-        function enviarWhatsVendas(plano = null) {
-            let mensagem = "";
-            if (plano && mensagensPorPlano[plano]) {
-                mensagem = mensagensPorPlano[plano];
-            } else {
-                mensagem = getRandomMessage(mensagensVendas);
-            }
+        function enviarWhatsVendas() {
+            const mensagem = getRandomMessage(mensagensVendas);
             window.open(`https://wa.me/${WHATSAPP_VENDAS}?text=${encodeURIComponent(mensagem)}`, '_blank');
         }
 
@@ -731,13 +727,10 @@
             window.open(`https://wa.me/${WHATSAPP_INDICACAO}?text=${encodeURIComponent(getRandomMessage(mensagensIndicacao))}`, '_blank');
         }
 
-        // Eventos
-        document.getElementById('heroWhatsBtn').addEventListener('click', () => enviarWhatsVendas());
-        document.getElementById('whatsFloatBtn').addEventListener('click', () => enviarWhatsVendas());
-        document.getElementById('btnAssinarPrincipal').addEventListener('click', () => enviarWhatsVendas());
-        document.querySelectorAll('.btn-assinar').forEach(btn => {
-            btn.addEventListener('click', () => enviarWhatsVendas(btn.getAttribute('data-plano')));
-        });
+        // Eventos - Todos os botões de venda usam a mesma função com mensagens aleatórias
+        document.getElementById('heroWhatsBtn').addEventListener('click', enviarWhatsVendas);
+        document.getElementById('whatsFloatBtn').addEventListener('click', enviarWhatsVendas);
+        document.getElementById('btnAssinarPrincipal').addEventListener('click', enviarWhatsVendas);
         document.getElementById('suporteBtn').addEventListener('click', enviarWhatsSuporte);
         document.getElementById('indicacaoBtn').addEventListener('click', enviarWhatsIndicacao);
 
