@@ -98,6 +98,7 @@
             align-items: center;
             gap: 10px;
             box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+            transition: all 0.2s;
         }
 
         .btn-whatsapp:hover {
@@ -220,6 +221,29 @@
         .btn-prev { left: 0; }
         .btn-next { right: 0; }
 
+        /* Indicador de slide ativo */
+        .carrossel-indicators {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .indicator {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            transition: all 0.2s;
+            cursor: pointer;
+        }
+
+        .indicator.active {
+            background: #ff4d4d;
+            width: 20px;
+            border-radius: 4px;
+        }
+
         /* CARROSSEL DE IMAGENS */
         .carrossel-imagens {
             position: relative;
@@ -275,7 +299,7 @@
             background: #1e2130;
         }
 
-        /* PLANOS COM EFEITO 3D - SEM BOTÕES INDIVIDUAIS */
+        /* PLANOS COM EFEITO 3D */
         .planos {
             padding: 3rem 1.5rem;
             background: #0a0c12;
@@ -388,7 +412,6 @@
             box-shadow: 0 15px 35px rgba(255, 77, 77, 0.6);
         }
 
-        /* Indicação Premiada */
         .indicacao-card {
             max-width: 900px;
             margin: 0 auto;
@@ -545,7 +568,7 @@
         </div>
     </section>
 
-    <!-- CARROSSEL DE TRAILERS -->
+    <!-- CARROSSEL DE TRAILERS COM AUTO ROTAÇÃO -->
     <section class="grade-section" style="padding: 2rem 1rem;">
         <div class="section-title"><i class="fas fa-play-circle"></i> Roleta de Trailers</div>
         <div class="carrossel-container">
@@ -559,9 +582,10 @@
             </div>
             <button class="carrossel-btn btn-next" id="nextTrailer"><i class="fas fa-chevron-right"></i></button>
         </div>
+        <div class="carrossel-indicators" id="trailerIndicators"></div>
     </section>
 
-    <!-- CARROSSEL DE IMAGENS -->
+    <!-- CARROSSEL DE IMAGENS COM AUTO ROTAÇÃO -->
     <section class="grade-section" style="background: #0a0c12; padding: 2rem 1rem;">
         <div class="section-title">🔥 Catálogo em Destaque</div>
         <div class="carrossel-imagens">
@@ -575,9 +599,10 @@
             </div>
             <button class="carrossel-btn btn-next" id="nextImage"><i class="fas fa-chevron-right"></i></button>
         </div>
+        <div class="carrossel-indicators" id="imageIndicators"></div>
     </section>
 
-    <!-- PLANOS COM EFEITO 3D - SEM BOTÕES INDIVIDUAIS -->
+    <!-- PLANOS -->
     <section class="planos">
         <div class="section-title">📺 Escolha seu plano Mplay</div>
         <div class="cards-planos">
@@ -654,7 +679,6 @@
         <div class="franquiado-destaques">
             <span class="destaque-item"><i class="fas fa-graduation-cap"></i> Treinamento gratuito</span>
             <span class="destaque-item"><i class="fas fa-headset"></i> Suporte completo</span>
-            <span class="destaque-item"><i class="fas fa-chart-line"></i> Comissões atrativas</span>
         </div>
         <a href="https://painelcinecompany.online/#/rs/4vLbAXg1gG/7loL7nZ1XM" target="_blank" class="btn-franquiado"><i class="fas fa-store"></i> Quero ser Franqueado</a>
     </section>
@@ -672,41 +696,41 @@
         const WHATSAPP_SUPORTE = "557192871534";
         const WHATSAPP_INDICACAO = "557192871534";
 
-        // MENSAGENS FOCADAS NA MPLAY - SEM SUPOSIÇÕES SOBRE OUTROS SERVIÇOS
+        // MENSAGENS FOCADAS NA MPLAY
         const mensagensVendas = [
             "Olá! Vim pelo site da Mplay. Gostaria de receber informações detalhadas sobre os planos de assinatura.",
             "Boa tarde! Tenho interesse em contratar a Mplay. Quais são os canais disponíveis no pacote?",
             "Oi! A Mplay funciona em Smart TV LG? Gostaria de saber mais sobre a compatibilidade.",
             "Fala! Quero assinar a Mplay. Como funciona o processo de ativação e instalação?",
-            "Olá! A Mplay oferece suporte para dispositivos Android TV e Fire Stick? Me ajudem por favor.",
+            "Olá! A Mplay oferece suporte para dispositivos Android TV e Fire Stick?",
             "Bom dia! Gostaria de saber se a Mplay transmite eventos esportivos ao vivo, como futebol e UFC.",
             "Oi! A Mplay tem aplicativo oficial para celular e TV? Como faço para baixar?",
             "Fala! Quais são as formas de pagamento aceitas pela Mplay? Pix, cartão ou boleto?",
-            "Olá! A Mplay tem garantia de qualidade 4K sem travamentos? Gostaria de mais detalhes.",
+            "Olá! A Mplay tem garantia de qualidade 4K sem travamentos?",
             "Boa tarde! Posso assistir a Mplay em mais de um dispositivo ao mesmo tempo?",
             "Oi! A Mplay oferece teste grátis para conhecer o serviço antes de assinar?",
-            "Fala! Quero saber mais sobre o catálogo de filmes e séries da Mplay. Atualizam com frequência?",
+            "Fala! Quero saber mais sobre o catálogo de filmes e séries da Mplay.",
             "Olá! A Mplay tem canais abertos e fechados? Gostaria da lista completa.",
             "Bom dia! A instalação da Mplay é fácil? Preciso de algum conhecimento técnico?",
             "Oi! A Mplay funciona via Chromecast? Quero assistir na TV direto do celular.",
-            "Fala! Gostaria de contratar a Mplay para toda minha família. Quantos dispositivos posso conectar?",
-            "Olá! A Mplay tem suporte 24h? Preciso de assistência em caso de problemas técnicos.",
+            "Fala! Gostaria de contratar a Mplay para toda minha família.",
+            "Olá! A Mplay tem suporte 24h? Preciso de assistência técnica.",
             "Boa tarde! A qualidade de imagem da Mplay é realmente 4K em todos os canais?",
             "Oi! Quero assinar a Mplay agora mesmo. Como faço para pagar e ativar?",
-            "Fala! Me falaram muito bem da Mplay. Quero saber mais sobre os planos e valores."
+            "Fala! Me falaram muito bem da Mplay. Quero saber mais sobre os planos."
         ];
 
         const mensagensSuporte = [
-            "Olá! Preciso de suporte técnico para instalar o aplicativo da Mplay na minha TV. Pode me ajudar?",
-            "Fala! Estou com dificuldade para ativar minha assinatura da Mplay. Alguém me auxilia?",
-            "Oi! O app da Mplay está travando aqui. Como posso resolver esse problema?",
+            "Olá! Preciso de suporte técnico para instalar o aplicativo da Mplay na minha TV.",
+            "Fala! Estou com dificuldade para ativar minha assinatura da Mplay.",
+            "Oi! O app da Mplay está travando aqui. Como posso resolver?",
             "Boa tarde! Perdi meu código de acesso da Mplay. Como recupero?",
-            "Olá! O áudio e vídeo estão dessincronizados nos canais da Mplay. O que fazer?"
+            "Olá! O áudio e vídeo estão dessincronizados nos canais da Mplay."
         ];
 
         const mensagensIndicacao = [
             "Olá! Gostaria de saber como funciona o programa de indicação da Mplay. Quero ganhar meses grátis!",
-            "Fala! Tenho amigos interessados em assinar a Mplay. Como faço para indicar e ganhar o mês grátis?",
+            "Fala! Tenho amigos interessados em assinar a Mplay. Como faço para indicar?",
             "Oi! A Mplay tem programa de indicação? Quero participar para ganhar benefícios."
         ];
 
@@ -715,8 +739,7 @@
         }
 
         function enviarWhatsVendas() {
-            const mensagem = getRandomMessage(mensagensVendas);
-            window.open(`https://wa.me/${WHATSAPP_VENDAS}?text=${encodeURIComponent(mensagem)}`, '_blank');
+            window.open(`https://wa.me/${WHATSAPP_VENDAS}?text=${encodeURIComponent(getRandomMessage(mensagensVendas))}`, '_blank');
         }
 
         function enviarWhatsSuporte() {
@@ -727,58 +750,226 @@
             window.open(`https://wa.me/${WHATSAPP_INDICACAO}?text=${encodeURIComponent(getRandomMessage(mensagensIndicacao))}`, '_blank');
         }
 
-        // Eventos - Todos os botões de venda usam a mesma função com mensagens aleatórias
+        // Eventos dos botões
         document.getElementById('heroWhatsBtn').addEventListener('click', enviarWhatsVendas);
         document.getElementById('whatsFloatBtn').addEventListener('click', enviarWhatsVendas);
         document.getElementById('btnAssinarPrincipal').addEventListener('click', enviarWhatsVendas);
         document.getElementById('suporteBtn').addEventListener('click', enviarWhatsSuporte);
         document.getElementById('indicacaoBtn').addEventListener('click', enviarWhatsIndicacao);
 
-        // CARROSSEL TRAILERS
+        // ============================================
+        // CARROSSEL DE TRAILERS COM AUTO ROTAÇÃO
+        // ============================================
         let trailerIndex = 0;
+        let trailerInterval;
+        let trailerAutoActive = true;
         const trailerTrack = document.getElementById('trailerTrack');
         const trailerCards = document.querySelectorAll('#trailerTrack .trailer-card');
+        const trailerIndicators = document.getElementById('trailerIndicators');
+        
         const getTrailerVisible = () => {
             const width = window.innerWidth;
             if (width <= 600) return 1;
             if (width <= 900) return 2;
             return 3;
         };
+        
+        const getTrailerTotalSlides = () => {
+            const visible = getTrailerVisible();
+            return Math.ceil(trailerCards.length / visible);
+        };
+        
+        const updateTrailerIndicators = () => {
+            const totalSlides = getTrailerTotalSlides();
+            const currentSlide = Math.floor(trailerIndex / getTrailerVisible());
+            trailerIndicators.innerHTML = '';
+            for (let i = 0; i < totalSlides; i++) {
+                const dot = document.createElement('div');
+                dot.classList.add('indicator');
+                if (i === currentSlide) dot.classList.add('active');
+                dot.addEventListener('click', () => {
+                    if (trailerInterval) clearInterval(trailerInterval);
+                    trailerIndex = i * getTrailerVisible();
+                    updateTrailer();
+                    startTrailerAutoRotation();
+                });
+                trailerIndicators.appendChild(dot);
+            }
+        };
+        
         function updateTrailer() {
             const visible = getTrailerVisible();
-            const max = Math.max(0, trailerCards.length - visible);
-            if (trailerIndex > max) trailerIndex = max;
+            const maxIndex = Math.max(0, trailerCards.length - visible);
+            if (trailerIndex > maxIndex) trailerIndex = maxIndex;
             if (trailerIndex < 0) trailerIndex = 0;
             const cardWidth = trailerCards[0]?.offsetWidth + 20 || 300;
             trailerTrack.style.transform = `translateX(-${trailerIndex * cardWidth}px)`;
+            updateTrailerIndicators();
         }
-        document.getElementById('prevTrailer').addEventListener('click', () => { if (trailerIndex > 0) trailerIndex--; updateTrailer(); });
-        document.getElementById('nextTrailer').addEventListener('click', () => { if (trailerIndex + getTrailerVisible() < trailerCards.length) trailerIndex++; updateTrailer(); });
-        window.addEventListener('resize', updateTrailer);
-        setTimeout(updateTrailer, 100);
-
-        // CARROSSEL IMAGENS
+        
+        function nextTrailerSlide() {
+            const visible = getTrailerVisible();
+            const maxIndex = Math.max(0, trailerCards.length - visible);
+            if (trailerIndex + visible < trailerCards.length) {
+                trailerIndex += visible;
+                updateTrailer();
+            } else {
+                trailerIndex = 0;
+                updateTrailer();
+            }
+        }
+        
+        function prevTrailerSlide() {
+            const visible = getTrailerVisible();
+            if (trailerIndex - visible >= 0) {
+                trailerIndex -= visible;
+                updateTrailer();
+            } else {
+                const maxIndex = Math.max(0, trailerCards.length - visible);
+                trailerIndex = maxIndex;
+                updateTrailer();
+            }
+        }
+        
+        function startTrailerAutoRotation() {
+            if (trailerInterval) clearInterval(trailerInterval);
+            trailerInterval = setInterval(() => {
+                if (trailerAutoActive) nextTrailerSlide();
+            }, 5000);
+        }
+        
+        function stopTrailerAutoRotation() {
+            if (trailerInterval) clearInterval(trailerInterval);
+            trailerAutoActive = false;
+            setTimeout(() => {
+                trailerAutoActive = true;
+                startTrailerAutoRotation();
+            }, 10000);
+        }
+        
+        document.getElementById('prevTrailer').addEventListener('click', () => {
+            stopTrailerAutoRotation();
+            prevTrailerSlide();
+        });
+        document.getElementById('nextTrailer').addEventListener('click', () => {
+            stopTrailerAutoRotation();
+            nextTrailerSlide();
+        });
+        window.addEventListener('resize', () => {
+            updateTrailer();
+            stopTrailerAutoRotation();
+        });
+        setTimeout(() => {
+            updateTrailer();
+            startTrailerAutoRotation();
+        }, 100);
+        
+        // ============================================
+        // CARROSSEL DE IMAGENS COM AUTO ROTAÇÃO
+        // ============================================
         let imageIndex = 0;
+        let imageInterval;
+        let imageAutoActive = true;
         const imageTrack = document.getElementById('imageTrack');
         const imageCards = document.querySelectorAll('#imageTrack .card-media');
+        const imageIndicators = document.getElementById('imageIndicators');
+        
         const getImageVisible = () => {
             const width = window.innerWidth;
             if (width <= 600) return 1;
             if (width <= 900) return 2;
             return 3;
         };
+        
+        const getImageTotalSlides = () => {
+            const visible = getImageVisible();
+            return Math.ceil(imageCards.length / visible);
+        };
+        
+        const updateImageIndicators = () => {
+            const totalSlides = getImageTotalSlides();
+            const currentSlide = Math.floor(imageIndex / getImageVisible());
+            imageIndicators.innerHTML = '';
+            for (let i = 0; i < totalSlides; i++) {
+                const dot = document.createElement('div');
+                dot.classList.add('indicator');
+                if (i === currentSlide) dot.classList.add('active');
+                dot.addEventListener('click', () => {
+                    if (imageInterval) clearInterval(imageInterval);
+                    imageIndex = i * getImageVisible();
+                    updateImage();
+                    startImageAutoRotation();
+                });
+                imageIndicators.appendChild(dot);
+            }
+        };
+        
         function updateImage() {
             const visible = getImageVisible();
-            const max = Math.max(0, imageCards.length - visible);
-            if (imageIndex > max) imageIndex = max;
+            const maxIndex = Math.max(0, imageCards.length - visible);
+            if (imageIndex > maxIndex) imageIndex = maxIndex;
             if (imageIndex < 0) imageIndex = 0;
             const cardWidth = imageCards[0]?.offsetWidth + 20 || 300;
             imageTrack.style.transform = `translateX(-${imageIndex * cardWidth}px)`;
+            updateImageIndicators();
         }
-        document.getElementById('prevImage').addEventListener('click', () => { if (imageIndex > 0) imageIndex--; updateImage(); });
-        document.getElementById('nextImage').addEventListener('click', () => { if (imageIndex + getImageVisible() < imageCards.length) imageIndex++; updateImage(); });
-        window.addEventListener('resize', updateImage);
-        setTimeout(updateImage, 100);
+        
+        function nextImageSlide() {
+            const visible = getImageVisible();
+            const maxIndex = Math.max(0, imageCards.length - visible);
+            if (imageIndex + visible < imageCards.length) {
+                imageIndex += visible;
+                updateImage();
+            } else {
+                imageIndex = 0;
+                updateImage();
+            }
+        }
+        
+        function prevImageSlide() {
+            const visible = getImageVisible();
+            if (imageIndex - visible >= 0) {
+                imageIndex -= visible;
+                updateImage();
+            } else {
+                const maxIndex = Math.max(0, imageCards.length - visible);
+                imageIndex = maxIndex;
+                updateImage();
+            }
+        }
+        
+        function startImageAutoRotation() {
+            if (imageInterval) clearInterval(imageInterval);
+            imageInterval = setInterval(() => {
+                if (imageAutoActive) nextImageSlide();
+            }, 5000);
+        }
+        
+        function stopImageAutoRotation() {
+            if (imageInterval) clearInterval(imageInterval);
+            imageAutoActive = false;
+            setTimeout(() => {
+                imageAutoActive = true;
+                startImageAutoRotation();
+            }, 10000);
+        }
+        
+        document.getElementById('prevImage').addEventListener('click', () => {
+            stopImageAutoRotation();
+            prevImageSlide();
+        });
+        document.getElementById('nextImage').addEventListener('click', () => {
+            stopImageAutoRotation();
+            nextImageSlide();
+        });
+        window.addEventListener('resize', () => {
+            updateImage();
+            stopImageAutoRotation();
+        });
+        setTimeout(() => {
+            updateImage();
+            startImageAutoRotation();
+        }, 100);
     </script>
 </body>
 </html>
