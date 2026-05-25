@@ -5,27 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
     <title>Mplay | A revolução do entretenimento IPTV</title>
     
-    <!-- FAVICON -->
     <link rel="icon" type="image/jpeg" href="icone.jpeg">
     <link rel="shortcut icon" type="image/jpeg" href="icone.jpeg">
-    <link rel="icon" type="image/x-icon" href="icone.jpeg">
     
-    <!-- OPEN GRAPH META TAGS -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Mplay | A revolução do entretenimento IPTV">
-    <meta property="og:description" content="📺 IPTV de alta definição + Milhares de canais, filmes, séries e jogos. Qualidade 4K, sem travamentos e com o melhor preço! Assista onde quiser.">
-    <meta property="og:url" content="https://seudominio.com">
+    <meta property="og:description" content="📺 IPTV de alta definição + Milhares de canais, filmes, séries e jogos. Qualidade 4K, sem travamentos e com o melhor preço!">
     <meta property="og:image" content="https://buildingdigitalsolutions.github.io/mplay.net/icone.jpeg">
-    <meta property="og:image:type" content="image/jpeg">
-    <meta property="og:image:width" content="300">
-    <meta property="og:image:height" content="300">
-    <meta property="og:image:alt" content="Logo Mplay IPTV">
     <meta property="og:locale" content="pt_BR">
-    <meta property="og:site_name" content="Mplay IPTV">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Mplay | A revolução do entretenimento IPTV">
-    <meta name="twitter:description" content="📺 IPTV de alta definição com milhares de canais, filmes e séries em 4K">
-    <meta name="twitter:image" content="https://buildingdigitalsolutions.github.io/mplay.net/icone.jpeg">
     
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -48,229 +35,141 @@
             background: linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.85)), url('https://i.pinimg.com/originals/60/9e/b8/609eb84a96ab833b47bf0c31a8f2b4eb.jpg');
             background-size: cover;
             background-position: center top;
-            background-attachment: fixed;
-            padding: 3rem 1.5rem 6rem 1.5rem;
+            padding: 3rem 1.5rem 5rem 1.5rem;
             text-align: center;
-            position: relative;
             border-bottom: 4px solid #ff4d4d;
         }
 
-        .hero::before {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 150px;
-            background: linear-gradient(to top, #0a0c12, transparent);
-            pointer-events: none;
-        }
-
         .logo {
-            font-size: 4.5rem;
+            font-size: 4rem;
             font-weight: 800;
-            letter-spacing: -2px;
             background: linear-gradient(135deg, #FFFFFF, #ffbc6e, #ff4d4d);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
             display: inline-block;
             margin-bottom: 1rem;
-            text-shadow: 0 0 30px rgba(255, 77, 77, 0.5);
             animation: glow 3s ease-in-out infinite alternate;
         }
 
         @keyframes glow {
-            0% { text-shadow: 0 0 20px rgba(255, 77, 77, 0.3); filter: brightness(1); }
-            100% { text-shadow: 0 0 50px rgba(255, 77, 77, 0.8), 0 0 20px rgba(255, 188, 110, 0.5); filter: brightness(1.1); }
+            0% { text-shadow: 0 0 20px rgba(255, 77, 77, 0.3); }
+            100% { text-shadow: 0 0 50px rgba(255, 77, 77, 0.8); }
         }
 
         .slogan {
-            font-size: 1.3rem;
-            font-weight: 500;
-            background: linear-gradient(135deg, rgba(255,77,77,0.2), rgba(255,188,110,0.1));
+            font-size: 1.1rem;
+            background: rgba(255,77,77,0.2);
             backdrop-filter: blur(10px);
             display: inline-block;
-            padding: 0.7rem 2rem;
+            padding: 0.5rem 1.5rem;
             border-radius: 50px;
             margin-bottom: 1.5rem;
             border: 1px solid rgba(255,77,77,0.5);
         }
 
         .hero h1 {
-            font-size: 3.2rem;
+            font-size: 2.5rem;
             font-weight: 800;
             margin: 1rem 0;
             background: linear-gradient(135deg, #fff, #ffbc6e);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
-            animation: fadeInUp 1s ease;
         }
 
         .hero p {
-            font-size: 1.2rem;
-            max-width: 700px;
+            font-size: 1rem;
+            max-width: 600px;
             margin: 0 auto 2rem;
             color: #e0e6ff;
-            animation: fadeInUp 1s ease 0.2s both;
-        }
-
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
         }
 
         .btn-whatsapp {
             background: linear-gradient(135deg, #25D366, #128C7E);
             color: white;
             border: none;
-            padding: 1rem 2.5rem;
-            font-size: 1.2rem;
+            padding: 0.9rem 2rem;
+            font-size: 1rem;
             font-weight: 700;
-            border-radius: 50px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            animation: fadeInUp 1s ease 0.4s both;
-        }
-
-        .btn-whatsapp:hover {
-            transform: translateY(-3px) scale(1.02);
-            box-shadow: 0 15px 35px rgba(37, 211, 102, 0.6);
-        }
-
-        /* Seção Dispositivos */
-        .dispositivos-section {
-            padding: 4rem 2rem;
-            background: #0f111a;
-        }
-
-        .dispositivos-content {
-            max-width: 1000px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .dispositivos-texto {
-            font-size: 1.2rem;
-            color: #ccc;
-            margin-bottom: 2rem;
-            line-height: 1.6;
-        }
-
-        .dispositivos-imagem img {
-            max-width: 100%;
-            height: auto;
-            max-height: 200px;
-            object-fit: contain;
-            filter: drop-shadow(0 0 20px rgba(255, 77, 77, 0.3));
-        }
-
-        /* Indicação Premiada */
-        .indicacao-section {
-            padding: 4rem 2rem;
-            background: linear-gradient(135deg, #1a1a2e, #0a0c12);
-        }
-
-        .indicacao-card {
-            max-width: 900px;
-            margin: 0 auto;
-            background: linear-gradient(135deg, #1e2130, #13161f);
-            border-radius: 32px;
-            padding: 2.5rem;
-            text-align: center;
-            border: 2px solid #ffbc6e;
-            box-shadow: 0 0 30px rgba(255, 188, 110, 0.2);
-        }
-
-        .indicacao-card:hover {
-            transform: translateY(-5px);
-            border-color: #ff4d4d;
-        }
-
-        .indicacao-icon {
-            font-size: 4rem;
-            color: #ffbc6e;
-            margin-bottom: 1rem;
-        }
-
-        .indicacao-card h2 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            background: linear-gradient(135deg, #ffbc6e, #ff4d4d);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-        }
-
-        .indicacao-card p {
-            color: #ccc;
-            margin-bottom: 1.5rem;
-            line-height: 1.6;
-        }
-
-        .btn-indicacao {
-            background: linear-gradient(135deg, #25D366, #128C7E);
-            color: white;
-            border: none;
-            padding: 1rem 2rem;
-            font-size: 1.1rem;
-            font-weight: bold;
             border-radius: 50px;
             cursor: pointer;
             display: inline-flex;
             align-items: center;
             gap: 10px;
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
         }
 
-        .grade-section {
-            padding: 4rem 2rem;
+        /* Seção Dispositivos */
+        .dispositivos-section {
+            padding: 3rem 1.5rem;
             background: #0f111a;
+            text-align: center;
         }
 
-        .container {
-            max-width: 1300px;
-            margin: 0 auto;
+        .dispositivos-imagem img {
+            max-width: 100%;
+            height: auto;
+            max-height: 150px;
         }
 
         .section-title {
-            font-size: 2rem;
+            font-size: 1.8rem;
             font-weight: 700;
-            margin-bottom: 2rem;
             text-align: center;
+            margin-bottom: 2rem;
         }
 
         .section-title:after {
             content: '';
-            width: 80px;
-            height: 4px;
+            width: 60px;
+            height: 3px;
             background: #ff4d4d;
             display: block;
             margin: 0.8rem auto 0;
             border-radius: 4px;
         }
 
-        .grid-trailers, .grid-imagens {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2rem;
-            margin-top: 1rem;
-        }
-
-        .trailer-card, .card-media {
-            background: #1a1d2b;
-            border-radius: 24px;
+        /* CARROSSEL DE TRAILERS */
+        .carrossel-container {
+            position: relative;
+            max-width: 100%;
             overflow: hidden;
-            transition: transform 0.4s, box-shadow 0.3s;
+            padding: 0 40px;
         }
 
-        .trailer-card:hover, .card-media:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 25px 35px rgba(255, 77, 77, 0.2);
+        .carrossel-track {
+            display: flex;
+            transition: transform 0.5s ease;
+            gap: 20px;
+        }
+
+        .trailer-card {
+            flex: 0 0 calc(33.333% - 14px);
+            min-width: calc(33.333% - 14px);
+            background: #1a1d2b;
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        @media (max-width: 900px) {
+            .trailer-card {
+                flex: 0 0 calc(50% - 10px);
+                min-width: calc(50% - 10px);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .trailer-card {
+                flex: 0 0 100%;
+                min-width: 100%;
+            }
+        }
+
+        .trailer-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 30px rgba(255, 77, 77, 0.2);
         }
 
         .video-container {
@@ -285,100 +184,165 @@
             border: none;
         }
 
-        .trailer-info, .card-media .info {
-            padding: 1rem;
+        .trailer-info {
+            padding: 0.8rem;
             text-align: center;
-            background: linear-gradient(145deg, #1e2130, #13161f);
+            background: #1e2130;
+            font-size: 0.8rem;
             font-weight: 600;
+        }
+
+        .carrossel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 77, 77, 0.8);
+            color: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.2rem;
+            z-index: 10;
+            transition: all 0.2s;
+        }
+
+        .carrossel-btn:hover {
+            background: #ff4d4d;
+            transform: translateY(-50%) scale(1.05);
+        }
+
+        .btn-prev { left: 0; }
+        .btn-next { right: 0; }
+
+        /* CARROSSEL DE IMAGENS */
+        .carrossel-imagens {
+            position: relative;
+            max-width: 100%;
+            overflow: hidden;
+            padding: 0 40px;
+        }
+
+        .imagens-track {
+            display: flex;
+            transition: transform 0.5s ease;
+            gap: 20px;
+        }
+
+        .card-media {
+            flex: 0 0 calc(33.333% - 14px);
+            min-width: calc(33.333% - 14px);
+            background: #1a1d2b;
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        @media (max-width: 900px) {
+            .card-media {
+                flex: 0 0 calc(50% - 10px);
+                min-width: calc(50% - 10px);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .card-media {
+                flex: 0 0 100%;
+                min-width: 100%;
+            }
         }
 
         .card-media img {
             width: 100%;
-            height: 220px;
+            height: 200px;
             object-fit: cover;
+            transition: transform 0.5s;
         }
 
-        /* PLANOS EM DESTAQUE */
-        .planos {
-            background: #0a0c12;
-            padding: 4rem 2rem;
-            position: relative;
+        .card-media:hover img {
+            transform: scale(1.05);
         }
 
-        .planos-destaque {
+        .card-media .info {
+            padding: 0.8rem;
             text-align: center;
-            margin-bottom: 2rem;
+            font-weight: 600;
+            background: #1e2130;
         }
 
-        .planos-destaque span {
-            background: #ff4d4d;
-            padding: 0.3rem 1.5rem;
-            border-radius: 50px;
-            font-size: 0.9rem;
-            font-weight: bold;
-            display: inline-block;
+        /* PLANOS COM EFEITO 3D */
+        .planos {
+            padding: 3rem 1.5rem;
+            background: #0a0c12;
         }
 
         .cards-planos {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 2rem;
+            gap: 1.5rem;
             margin-top: 2rem;
         }
 
         .plano {
-            background: #13161f;
-            border-radius: 32px;
-            padding: 2rem 1.5rem;
-            width: 260px;
+            background: linear-gradient(145deg, #1a1d2b, #13161f);
+            border-radius: 24px;
+            padding: 1.8rem 1.2rem;
+            width: 250px;
             text-align: center;
-            transition: all 0.3s ease;
+            transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
             border: 1px solid rgba(255, 77, 77, 0.2);
             position: relative;
+            transform-style: preserve-3d;
+            perspective: 1000px;
         }
 
         .plano:hover {
-            transform: scale(1.03);
+            transform: translateY(-12px) rotateX(5deg);
             border-color: #ff4d4d;
-            box-shadow: 0 20px 35px rgba(255, 77, 77, 0.25);
+            box-shadow: 0 30px 40px rgba(255, 77, 77, 0.25);
         }
 
         .plano.destaque {
             border: 2px solid #ffbc6e;
-            box-shadow: 0 0 20px rgba(255, 188, 110, 0.3);
+            box-shadow: 0 0 25px rgba(255, 188, 110, 0.3);
+            transform: scale(1.02);
+        }
+
+        .plano.destaque:hover {
+            transform: translateY(-12px) rotateX(5deg) scale(1.02);
         }
 
         .plano h3 {
-            font-size: 1.6rem;
-            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
         }
 
         .preco {
-            font-size: 2rem;
+            font-size: 1.8rem;
             font-weight: 800;
             color: #ffbc6e;
             margin: 1rem 0;
         }
 
         .preco small {
-            font-size: 0.85rem;
-            font-weight: 400;
+            font-size: 0.75rem;
             color: #aaa;
         }
 
         .plano ul {
             list-style: none;
-            margin: 1.5rem 0;
+            margin: 1.2rem 0;
         }
 
         .plano li {
-            margin: 0.7rem 0;
+            margin: 0.6rem 0;
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 8px;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
         }
 
         .plano li i {
@@ -386,24 +350,24 @@
         }
 
         .btn-assinar {
-            background: #ff4d4d;
+            background: linear-gradient(135deg, #ff4d4d, #c53030);
             color: white;
             border: none;
-            padding: 0.8rem 1.5rem;
+            padding: 0.8rem 1.2rem;
             border-radius: 40px;
             font-weight: bold;
             width: 100%;
             cursor: pointer;
-            transition: 0.2s;
+            transition: all 0.2s;
         }
 
         .btn-assinar:hover {
-            background: #e03a3a;
             transform: scale(0.98);
+            box-shadow: 0 5px 15px rgba(255, 77, 77, 0.4);
         }
 
         .badge {
-            font-size: 0.7rem;
+            font-size: 0.65rem;
             background: #ff4d4d;
             padding: 2px 8px;
             border-radius: 40px;
@@ -411,56 +375,13 @@
             margin-left: 5px;
         }
 
-        /* Botão Assinar Agora principal */
         .btn-assinar-principal {
             text-align: center;
-            margin-top: 3rem;
+            margin-top: 2.5rem;
         }
 
         .btn-assinar-grande {
             background: linear-gradient(135deg, #ff4d4d, #b71c1c);
-            color: white;
-            border: none;
-            padding: 1rem 2.5rem;
-            font-size: 1.2rem;
-            font-weight: 700;
-            border-radius: 50px;
-            cursor: pointer;
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            box-shadow: 0 8px 25px rgba(255, 77, 77, 0.4);
-        }
-
-        .btn-assinar-grande:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 35px rgba(255, 77, 77, 0.6);
-        }
-
-        /* Suporte Técnico */
-        .suporte-section {
-            background: linear-gradient(135deg, #0f111a, #0a0c12);
-            padding: 4rem 2rem;
-        }
-
-        .suporte-card {
-            max-width: 800px;
-            margin: 0 auto;
-            background: #13161f;
-            border-radius: 32px;
-            padding: 2.5rem;
-            text-align: center;
-            border: 1px solid rgba(37, 211, 102, 0.3);
-        }
-
-        .suporte-card i {
-            font-size: 4rem;
-            color: #25D366;
-            margin-bottom: 1rem;
-        }
-
-        .btn-suporte {
-            background: #25D366;
             color: white;
             border: none;
             padding: 1rem 2rem;
@@ -470,30 +391,63 @@
             cursor: pointer;
             display: inline-flex;
             align-items: center;
-            gap: 10px;
+            gap: 12px;
+            box-shadow: 0 8px 25px rgba(255, 77, 77, 0.4);
         }
 
-        /* Franquiado */
-        .franquiado-section {
-            background: linear-gradient(135deg, #1a0a1a, #0a0c12);
-            padding: 4rem 2rem;
+        /* Indicação Premiada */
+        .indicacao-card {
+            max-width: 900px;
+            margin: 0 auto;
+            background: linear-gradient(135deg, #1e2130, #13161f);
+            border-radius: 28px;
+            padding: 2rem;
+            text-align: center;
+            border: 2px solid #ffbc6e;
+        }
+
+        .indicacao-card h2 {
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #ffbc6e, #ff4d4d);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .btn-indicacao, .btn-suporte {
+            background: #25D366;
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            font-weight: bold;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .suporte-card {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #13161f;
+            border-radius: 28px;
+            padding: 2rem;
             text-align: center;
         }
 
-        .franquiado-container h2 {
-            font-size: 2.2rem;
-            margin-bottom: 1rem;
-        }
-
-        .franquiado-container h2 span {
-            color: #ffbc6e;
+        .franquiado-section {
+            background: linear-gradient(135deg, #1a0a1a, #0a0c12);
+            padding: 3rem 1.5rem;
+            text-align: center;
         }
 
         .franquiado-destaques {
             display: flex;
             justify-content: center;
-            gap: 2rem;
-            margin: 2rem 0;
+            gap: 1rem;
+            margin: 1.5rem 0;
             flex-wrap: wrap;
         }
 
@@ -501,37 +455,33 @@
             background: rgba(255, 77, 77, 0.1);
             border: 1px solid rgba(255, 77, 77, 0.3);
             border-radius: 50px;
-            padding: 0.7rem 1.5rem;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
+            padding: 0.5rem 1rem;
+            font-size: 0.85rem;
         }
 
         .btn-franquiado {
             background: linear-gradient(135deg, #ff4d4d, #b71c1c);
             color: white;
-            border: none;
-            padding: 1.2rem 2.5rem;
-            font-size: 1.2rem;
-            font-weight: bold;
+            padding: 0.8rem 2rem;
             border-radius: 50px;
-            cursor: pointer;
             display: inline-flex;
             align-items: center;
-            gap: 12px;
+            gap: 10px;
             text-decoration: none;
+            font-weight: bold;
         }
 
         .footer {
             background: #05070c;
             text-align: center;
             padding: 2rem;
+            font-size: 0.8rem;
             color: #aaa;
         }
 
         .footer-logo {
-            width: 60px;
-            height: 60px;
+            width: 50px;
+            height: 50px;
             border-radius: 50%;
             object-fit: cover;
             margin-bottom: 1rem;
@@ -540,26 +490,29 @@
 
         .whatsapp-float {
             position: fixed;
-            bottom: 25px;
-            right: 25px;
-            background-color: #25D366;
-            width: 60px;
-            height: 60px;
+            bottom: 20px;
+            right: 20px;
+            background: #25D366;
+            width: 55px;
+            height: 55px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 2rem;
+            font-size: 1.8rem;
             color: white;
             cursor: pointer;
             z-index: 99;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
         }
 
         @media (max-width: 680px) {
-            .hero h1 { font-size: 1.9rem; }
+            .hero h1 { font-size: 1.8rem; }
             .logo { font-size: 2.8rem; }
-            .grid-trailers, .grid-imagens { grid-template-columns: 1fr; }
+            .section-title { font-size: 1.5rem; }
             .plano { width: 100%; max-width: 280px; }
+            .carrossel-container, .carrossel-imagens { padding: 0 30px; }
+            .carrossel-btn { width: 32px; height: 32px; font-size: 0.9rem; }
         }
     </style>
 </head>
@@ -568,312 +521,271 @@
     <section class="hero">
         <div class="logo">MPLAY</div>
         <div class="slogan"><i class="fas fa-infinity"></i> Onde o entretenimento não tem limites</div>
-        <h1>IPTV de alta definição <br> + Milhares de canais, filmes, séries e jogos</h1>
-        <p>Assista onde quiser, na sua TV, celular ou computador. Qualidade 4K, sem travamentos e com o melhor preço.</p>
-        <button class="btn-whatsapp" id="heroWhatsBtn"><i class="fab fa-whatsapp"></i> Fale conosco no WhatsApp</button>
+        <h1>IPTV de alta definição <br> Milhares de canais, filmes e séries</h1>
+        <p>Qualidade 4K, sem travamentos, suporte 24h. Funciona em Smart TV, celular, tablet e computador.</p>
+        <button class="btn-whatsapp" id="heroWhatsBtn"><i class="fab fa-whatsapp"></i> Fale conosco</button>
     </section>
 
     <!-- Dispositivos -->
     <section class="dispositivos-section">
-        <div class="container">
-            <div class="section-title"><i class="fas fa-tv"></i> Compatível com todos os seus dispositivos</div>
-            <div class="dispositivos-content">
-                <div class="dispositivos-texto">Smart TV, Android TV, Fire Stick, Celular, Tablet, PC, Mac, e mais. A Mplay funciona perfeitamente onde você estiver.</div>
-                <div class="dispositivos-imagem">
-                    <img src="https://revistacasavip.com.br/wp-content/uploads/2026/02/ChatGPT_Image_22_de_fev._de_2026__14_03_28-removebg-preview.png" alt="Dispositivos compatíveis">
-                </div>
-            </div>
+        <div class="section-title"><i class="fas fa-tv"></i> Compatível com todos os dispositivos</div>
+        <div class="dispositivos-imagem">
+            <img src="https://revistacasavip.com.br/wp-content/uploads/2026/02/ChatGPT_Image_22_de_fev._de_2026__14_03_28-removebg-preview.png" alt="Dispositivos compatíveis">
         </div>
     </section>
 
-    <!-- Indicação Premiada -->
-    <section class="indicacao-section">
-        <div class="container">
-            <div class="indicacao-card">
-                <div class="indicacao-icon"><i class="fas fa-gift"></i></div>
-                <h2>🏆 INDICAÇÃO PREMIADA! 🏆</h2>
-                <p>Indique um amigo para a Mplay e quando ele assinar, <strong style="color:#ffbc6e">VOCÊ GANHA 1 MÊS GRÁTIS!</strong> Quanto mais amigos você indicar, mais meses gratuitos acumula.</p>
-                <button class="btn-indicacao" id="indicacaoBtn"><i class="fab fa-whatsapp"></i> Falar sobre indicação</button>
+    <!-- CARROSSEL DE TRAILERS -->
+    <section class="grade-section" style="padding: 2rem 1rem;">
+        <div class="section-title"><i class="fas fa-play-circle"></i> Roleta de Trailers</div>
+        <div class="carrossel-container">
+            <button class="carrossel-btn btn-prev" id="prevTrailer"><i class="fas fa-chevron-left"></i></button>
+            <div class="carrossel-track" id="trailerTrack">
+                <div class="trailer-card"><div class="video-container"><iframe src="https://www.youtube.com/embed/2YnCjSdt7Uo" frameborder="0" allowfullscreen></iframe></div><div class="trailer-info">Impuros | Nova Temporada</div></div>
+                <div class="trailer-card"><div class="video-container"><iframe src="https://www.youtube.com/embed/wgeXFqlISzc" frameborder="0" allowfullscreen></iframe></div><div class="trailer-info">STREET FIGHTER (2026)</div></div>
+                <div class="trailer-card"><div class="video-container"><iframe src="https://www.youtube.com/embed/bO_APd0MNVU" frameborder="0" allowfullscreen></iframe></div><div class="trailer-info">Todo Mundo em Pânico (2026)</div></div>
+                <div class="trailer-card"><div class="video-container"><iframe src="https://www.youtube.com/embed/XE463FS4CvQ" frameborder="0" allowfullscreen></iframe></div><div class="trailer-info">Caminhos do Crime</div></div>
+                <div class="trailer-card"><div class="video-container"><iframe src="https://www.youtube.com/embed/P_-r11fcDTc" frameborder="0" allowfullscreen></iframe></div><div class="trailer-info">Peaky Blinders</div></div>
             </div>
+            <button class="carrossel-btn btn-next" id="nextTrailer"><i class="fas fa-chevron-right"></i></button>
         </div>
     </section>
 
-    <!-- Trailers -->
-    <section class="grade-section">
-        <div class="container">
-            <div class="section-title"><i class="fas fa-play-circle"></i> Roleta de Trailers</div>
-            <div class="grid-trailers">
-                <div class="trailer-card"><div class="video-container"><iframe src="https://www.youtube.com/embed/2YnCjSdt7Uo" frameborder="0" allowfullscreen></iframe></div><div class="trailer-info"><h3>Impuros | Nova Temporada</h3></div></div>
-                <div class="trailer-card"><div class="video-container"><iframe src="https://www.youtube.com/embed/wgeXFqlISzc" frameborder="0" allowfullscreen></iframe></div><div class="trailer-info"><h3>STREET FIGHTER (2026)</h3></div></div>
-                <div class="trailer-card"><div class="video-container"><iframe src="https://www.youtube.com/embed/bO_APd0MNVU" frameborder="0" allowfullscreen></iframe></div><div class="trailer-info"><h3>Todo Mundo em Pânico (2026)</h3></div></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Catálogo -->
-    <section class="grade-section" style="background: #0a0c12;">
-        <div class="container">
-            <div class="section-title">🔥 Catálogo em Destaque</div>
-            <div class="grid-imagens">
+    <!-- CARROSSEL DE IMAGENS -->
+    <section class="grade-section" style="background: #0a0c12; padding: 2rem 1rem;">
+        <div class="section-title">🔥 Catálogo em Destaque</div>
+        <div class="carrossel-imagens">
+            <button class="carrossel-btn btn-prev" id="prevImage"><i class="fas fa-chevron-left"></i></button>
+            <div class="imagens-track" id="imageTrack">
                 <div class="card-media"><img src="https://static.wixstatic.com/media/ee5d2f_25a62872f1e243f8b49be7c386550188~mv2.png" alt="Impuros"><div class="info">Impuros</div></div>
                 <div class="card-media"><img src="https://upload.wikimedia.org/wikipedia/pt/d/d4/Street_Fighter_2026_film_poster.jpeg" alt="Street Fighter"><div class="info">Street Fighter 2026</div></div>
                 <div class="card-media"><img src="https://i0.wp.com/www.pretessencias.com.br/wp-content/uploads/2026/01/unnamed-3-1.jpg" alt="Panico"><div class="info">Panico 7</div></div>
                 <div class="card-media"><img src="https://marcaspelomundo.com.br/wp-content/uploads/2024/09/8d8589005077b776bf251bbe20ba5380.png" alt="UEFA"><div class="info">UEFA Champions League</div></div>
+                <div class="card-media"><img src="https://a-static.besthdwallpaper.com/spider-man-ps5-game-wallpaper-2560x1600-106417_7.jpg" alt="Spider-Man"><div class="info">Spider-Man</div></div>
             </div>
+            <button class="carrossel-btn btn-next" id="nextImage"><i class="fas fa-chevron-right"></i></button>
         </div>
     </section>
 
-    <!-- PLANOS DE ASSINATURA - EM DESTAQUE -->
+    <!-- PLANOS COM EFEITO 3D -->
     <section class="planos">
-        <div class="container">
-            <div class="planos-destaque"><span>⭐ PLANOS EM DESTAQUE ⭐</span></div>
-            <div class="section-title">📺 Escolha seu plano Mplay</div>
-            <div class="cards-planos">
-                <div class="plano">
-                    <h3>Mensal</h3>
-                    <div class="preco">R$ 30,00<small>/mês</small></div>
-                    <ul>
-                        <li><i class="fas fa-check-circle"></i> Acesso completo</li>
-                        <li><i class="fas fa-check-circle"></i> 4K Ultra HD</li>
-                        <li><i class="fas fa-check-circle"></i> Canais + Filmes + Séries</li>
-                        <li><i class="fas fa-check-circle"></i> Suporte 24h</li>
-                    </ul>
-                    <button class="btn-assinar" data-plano="Mensal">Assinar agora</button>
-                </div>
-                <div class="plano">
-                    <h3>Trimestral</h3>
-                    <div class="preco">R$ 85,00<small>/3 meses</small></div>
-                    <ul>
-                        <li><i class="fas fa-check-circle"></i> 3 meses por R$85,00</li>
-                        <li><i class="fas fa-check-circle"></i> 4K Ultra HD</li>
-                        <li><i class="fas fa-check-circle"></i> Economia de 5%</li>
-                        <li><i class="fas fa-check-circle"></i> Conteúdo exclusivo</li>
-                    </ul>
-                    <button class="btn-assinar" data-plano="Trimestral">Assinar agora</button>
-                </div>
-                <div class="plano destaque">
-                    <h3>Semestral ⭐</h3>
-                    <div class="preco">R$ 160,00<small>/6 meses</small></div>
-                    <ul>
-                        <li><i class="fas fa-check-circle"></i> 6 meses por R$160,00</li>
-                        <li><i class="fas fa-check-circle"></i> Economia de 10%</li>
-                        <li><i class="fas fa-check-circle"></i> 4K Ultra HD</li>
-                        <li><i class="fas fa-check-circle"></i> Acesso completo</li>
-                    </ul>
-                    <button class="btn-assinar" data-plano="Semestral">Assinar agora</button>
-                </div>
-                <div class="plano">
-                    <h3>Anual <span class="badge">MAIS ECONÔMICO</span></h3>
-                    <div class="preco">R$ 240,00<small>/12 meses</small></div>
-                    <ul>
-                        <li><i class="fas fa-check-circle"></i> 12 meses por R$240,00</li>
-                        <li><i class="fas fa-check-circle"></i> 4K Ultra HD</li>
-                        <li><i class="fas fa-check-circle"></i> Suporte prioritário</li>
-                        <li><i class="fas fa-check-circle"></i> Acesso VIP eventos</li>
-                    </ul>
-                    <button class="btn-assinar" data-plano="Anual">Assinar agora</button>
-                </div>
+        <div class="section-title">📺 Escolha seu plano Mplay</div>
+        <div class="cards-planos">
+            <div class="plano">
+                <h3>Mensal</h3>
+                <div class="preco">R$ 30,00<small>/mês</small></div>
+                <ul>
+                    <li><i class="fas fa-check-circle"></i> Acesso completo</li>
+                    <li><i class="fas fa-check-circle"></i> 4K Ultra HD</li>
+                    <li><i class="fas fa-check-circle"></i> Canais + Filmes + Séries</li>
+                    <li><i class="fas fa-check-circle"></i> Suporte 24h</li>
+                </ul>
+                <button class="btn-assinar" data-plano="Mensal">Assinar agora</button>
             </div>
-            <div class="btn-assinar-principal">
-                <button class="btn-assinar-grande" id="btnAssinarPrincipal"><i class="fab fa-whatsapp"></i> Assinar Agora</button>
+            <div class="plano">
+                <h3>Trimestral</h3>
+                <div class="preco">R$ 85,00<small>/3 meses</small></div>
+                <ul>
+                    <li><i class="fas fa-check-circle"></i> 3 meses de acesso</li>
+                    <li><i class="fas fa-check-circle"></i> 4K Ultra HD</li>
+                    <li><i class="fas fa-check-circle"></i> Conteúdo exclusivo</li>
+                    <li><i class="fas fa-check-circle"></i> Suporte prioritário</li>
+                </ul>
+                <button class="btn-assinar" data-plano="Trimestral">Assinar agora</button>
             </div>
+            <div class="plano destaque">
+                <h3>Semestral ⭐</h3>
+                <div class="preco">R$ 160,00<small>/6 meses</small></div>
+                <ul>
+                    <li><i class="fas fa-check-circle"></i> Melhor custo-benefício</li>
+                    <li><i class="fas fa-check-circle"></i> 4K Ultra HD</li>
+                    <li><i class="fas fa-check-circle"></i> Acesso a eventos ao vivo</li>
+                    <li><i class="fas fa-check-circle"></i> Canais premium liberados</li>
+                </ul>
+                <button class="btn-assinar" data-plano="Semestral">Assinar agora</button>
+            </div>
+            <div class="plano">
+                <h3>Anual <span class="badge">MAIS ECONÔMICO</span></h3>
+                <div class="preco">R$ 240,00<small>/12 meses</small></div>
+                <ul>
+                    <li><i class="fas fa-check-circle"></i> 12 meses pelo melhor preço</li>
+                    <li><i class="fas fa-check-circle"></i> 4K Ultra HD</li>
+                    <li><i class="fas fa-check-circle"></i> Acesso VIP eventos</li>
+                    <li><i class="fas fa-check-circle"></i> Suporte prioritário 24/7</li>
+                </ul>
+                <button class="btn-assinar" data-plano="Anual">Assinar agora</button>
+            </div>
+        </div>
+        <div class="btn-assinar-principal">
+            <button class="btn-assinar-grande" id="btnAssinarPrincipal"><i class="fab fa-whatsapp"></i> Assinar Agora</button>
+        </div>
+    </section>
+
+    <!-- Indicação Premiada -->
+    <section style="padding: 2rem 1.5rem;">
+        <div class="indicacao-card">
+            <i class="fas fa-gift" style="font-size: 3rem; color: #ffbc6e;"></i>
+            <h2>🏆 INDICAÇÃO PREMIADA! 🏆</h2>
+            <p>Indique um amigo para a Mplay e quando ele assinar, <strong style="color:#ffbc6e">VOCÊ GANHA 1 MÊS GRÁTIS!</strong> Quanto mais amigos, mais meses gratuitos.</p>
+            <button class="btn-indicacao" id="indicacaoBtn"><i class="fab fa-whatsapp"></i> Falar sobre indicação</button>
         </div>
     </section>
 
     <!-- Suporte Técnico -->
-    <section class="suporte-section">
-        <div class="container">
-            <div class="section-title">🛠️ Suporte Técnico</div>
-            <div class="suporte-card">
-                <i class="fab fa-whatsapp"></i>
-                <h3>Precisa de ajuda técnica?</h3>
-                <p>Nossa equipe está disponível para resolver problemas de instalação, travamentos, configuração e muito mais.</p>
-                <button class="btn-suporte" id="suporteBtn"><i class="fab fa-whatsapp"></i> Falar com Suporte</button>
-            </div>
+    <section style="padding: 2rem 1.5rem;">
+        <div class="suporte-card">
+            <i class="fab fa-whatsapp" style="font-size: 3rem; color: #25D366;"></i>
+            <h3>Suporte Técnico</h3>
+            <p>Precisa de ajuda com instalação, travamentos ou configuração? Nossa equipe está disponível 24h.</p>
+            <button class="btn-suporte" id="suporteBtn"><i class="fab fa-whatsapp"></i> Falar com Suporte</button>
         </div>
     </section>
 
     <!-- Franquiado -->
     <section class="franquiado-section">
-        <div class="franquiado-container">
-            <h2>🚀 <span>Seja um Franqueado</span> Mplay</h2>
-            <p>Transforme sua paixão por entretenimento em um negócio lucrativo!</p>
-            <div class="franquiado-destaques">
-                <span class="destaque-item"><i class="fas fa-graduation-cap"></i> Treinamento gratuito</span>
-                <span class="destaque-item"><i class="fas fa-headset"></i> Suporte comercial completo</span>
-            </div>
-            <a href="https://painelcinecompany.online/#/rs/4vLbAXg1gG/7loL7nZ1XM" target="_blank" class="btn-franquiado"><i class="fas fa-store"></i> Quero ser Franqueado</a>
+        <h2>🚀 <span style="color:#ffbc6e">Seja um Franqueado</span> Mplay</h2>
+        <p>Transforme seu negócio com a melhor plataforma de IPTV do mercado.</p>
+        <div class="franquiado-destaques">
+            <span class="destaque-item"><i class="fas fa-graduation-cap"></i> Treinamento gratuito</span>
+            <span class="destaque-item"><i class="fas fa-headset"></i> Suporte completo</span>
         </div>
+        <a href="https://painelcinecompany.online/#/rs/4vLbAXg1gG/7loL7nZ1XM" target="_blank" class="btn-franquiado"><i class="fas fa-store"></i> Quero ser Franqueado</a>
     </section>
 
     <div class="footer">
-        <img src="logolb.png" class="footer-logo" onerror="this.src='https://placehold.co/60x60/ff4d4d/white?text=Logo'">
-        <p>Mplay IPTV - Entretenimento sem fronteiras | Suporte Técnico - LB BUILDING DIGITAL SOLUTIONS</p>
+        <img src="logolb.png" class="footer-logo" onerror="this.src='https://placehold.co/50x50/ff4d4d/white?text=M'">
+        <p>Mplay IPTV - Entretenimento sem fronteiras</p>
+        <p style="font-size: 0.7rem;">Suporte Técnico - LB BUILDING DIGITAL SOLUTIONS</p>
     </div>
 
     <div class="whatsapp-float" id="whatsFloatBtn"><i class="fab fa-whatsapp"></i></div>
 
     <script>
-        // NÚMEROS DE WHATSAPP
         const WHATSAPP_VENDAS = "557192515888";
         const WHATSAPP_SUPORTE = "557192871534";
         const WHATSAPP_INDICACAO = "557192871534";
 
-        // ============================================
-        // BANCO DE MENSAGENS VARIADAS PARA EVITAR BLOQUEIO
-        // ============================================
-        
-        // Mensagens variadas para contato de VENDAS (geral)
+        // MENSAGENS FOCADAS NA MPLAY - SEM SUPOSIÇÕES SOBRE OUTROS SERVIÇOS
         const mensagensVendas = [
-            "Olá! Vi o site da Mplay e fiquei interessado nos planos de IPTV. Poderiam me passar mais informações?",
-            "Bom dia! Gostaria de saber mais sobre os canais disponíveis e a qualidade 4K. Alguém pode me ajudar?",
-            "Oi! Tenho interesse em assinar a Mplay. Quais formas de pagamento vocês aceitam?",
-            "Olá, tudo bem? Gostaria de saber mais sobre os planos de assinatura. Qual vocês recomendam?",
-            "Fala pessoal! Cheguei pelo site e quero contratar o IPTV. Como funciona a instalação?",
-            "Oi! Estou buscando um IPTV de qualidade e me indicaram a Mplay. Quais canais esportivos vocês tem?",
-            "Boa tarde! Gostaria de testar o serviço antes de assinar. É possível?",
-            "Olá! Vi que vocês têm qualidade 4K. Isso funciona em todas as Smart TVs?",
-            "Fala! Quero assinar o plano anual. Como faço para começar agora mesmo?",
-            "Oi! Meu amigo me recomendou a Mplay. Vocês têm programa de indicação?",
-            "Bom dia! Qual a diferença entre os planos? Todos têm acesso aos mesmos canais?",
-            "Olá! Gostaria de saber se posso assistir em mais de um dispositivo ao mesmo tempo.",
-            "Fala pessoal! Vocês têm canais brasileiros abertos e fechados?",
-            "Oi! Quero saber se o aplicativo funciona no Fire Stick e na TV LG.",
-            "Bom dia! Estou pensando em assinar. Vocês oferecem algum desconto para pagamento anual?",
-            "Olá! Gostaria de contratar o plano trimestral. Como procedo para o pagamento?",
-            "Fala! Vocês têm suporte para Chromecast e Apple TV?",
-            "Oi! Quais jogos de futebol vocês transmitem ao vivo?",
-            "Boa tarde! Meu contrato com outra operadora está acabando e quero migrar para a Mplay.",
-            "Olá! O serviço tem garantia de estabilidade? Já tive problemas com outras IPTVs."
+            "Olá! Vim pelo site da Mplay. Gostaria de receber informações detalhadas sobre os planos de assinatura.",
+            "Boa tarde! Tenho interesse em contratar a Mplay. Quais são os canais disponíveis no pacote?",
+            "Oi! A Mplay funciona em Smart TV LG? Gostaria de saber mais sobre a compatibilidade.",
+            "Fala! Quero assinar a Mplay. Como funciona o processo de ativação e instalação?",
+            "Olá! A Mplay oferece suporte para dispositivos Android TV e Fire Stick? Me ajudem por favor.",
+            "Bom dia! Gostaria de saber se a Mplay transmite eventos esportivos ao vivo, como futebol e UFC.",
+            "Oi! A Mplay tem aplicativo oficial para celular e TV? Como faço para baixar?",
+            "Fala! Quais são as formas de pagamento aceitas pela Mplay? Pix, cartão ou boleto?",
+            "Olá! A Mplay tem garantia de qualidade 4K sem travamentos? Gostaria de mais detalhes.",
+            "Boa tarde! Posso assistir a Mplay em mais de um dispositivo ao mesmo tempo?",
+            "Oi! A Mplay oferece teste grátis para conhecer o serviço antes de assinar?",
+            "Fala! Quero saber mais sobre o catálogo de filmes e séries da Mplay. Atualizam com frequência?",
+            "Olá! A Mplay tem canais abertos e fechados? Gostaria da lista completa.",
+            "Bom dia! A instalação da Mplay é fácil? Preciso de algum conhecimento técnico?",
+            "Oi! A Mplay funciona via Chromecast? Quero assistir na TV direto do celular.",
+            "Fala! Gostaria de contratar a Mplay para toda minha família. Quantos dispositivos posso conectar?",
+            "Olá! A Mplay tem suporte 24h? Preciso de assistência em caso de problemas técnicos.",
+            "Boa tarde! A qualidade de imagem da Mplay é realmente 4K em todos os canais?",
+            "Oi! Quero assinar a Mplay agora mesmo. Como faço para pagar e ativar?",
+            "Fala! Me falaram muito bem da Mplay. Quero saber mais sobre os planos e valores."
         ];
 
-        // Mensagens para cada plano específico
         const mensagensPorPlano = {
-            "Mensal": [
-                "Olá! Quero assinar o plano MENSAL da Mplay. Como faço para começar?",
-                "Fala! Tenho interesse no plano Mensal de R$30. Pode me ajudar com a ativação?",
-                "Oi! Gostaria de contratar o plano mensal da Mplay. Aguardo retorno!"
-            ],
-            "Trimestral": [
-                "Olá! Quero assinar o plano TRIMESTRAL da Mplay por R$85. Me ajuda com a ativação?",
-                "Fala! Tenho interesse no plano trimestral. Como funciona o pagamento?",
-                "Oi! Gostaria de fechar o plano de 3 meses. Estou pronto para assinar!"
-            ],
-            "Semestral": [
-                "Olá! Quero contratar o plano SEMESTRAL da Mplay (R$160 por 6 meses). Ajuda aí!",
-                "Fala! O plano semestral parece ser o melhor custo-benefício. Como assino agora?",
-                "Oi! Tenho interesse no plano de 6 meses. Pode me passar as instruções de pagamento?"
-            ],
-            "Anual": [
-                "Olá! Quero assinar o plano ANUAL da Mplay por R$240. Melhor custo-benefício!",
-                "Fala! Tenho interesse no plano anual com suporte prioritário. Como faço para assinar?",
-                "Oi! Quero fechar o plano anual agora mesmo. Aguardo as instruções de pagamento!"
-            ]
+            "Mensal": "Olá! Quero assinar o plano MENSAL da Mplay (R$30/mês). Como faço para contratar e ativar?",
+            "Trimestral": "Olá! Quero assinar o plano TRIMESTRAL da Mplay (R$85/3 meses). Me passe as instruções de pagamento.",
+            "Semestral": "Olá! Quero assinar o plano SEMESTRAL da Mplay (R$160/6 meses). Melhor custo-benefício!",
+            "Anual": "Olá! Quero assinar o plano ANUAL da Mplay (R$240/12 meses). Quero suporte prioritário!"
         };
 
-        // Mensagens variadas para suporte técnico
         const mensagensSuporte = [
-            "Olá! Estou com dificuldade para instalar o aplicativo Mplay na minha TV. Pode me ajudar?",
-            "Fala! O sistema está travando aqui. Como posso resolver?",
-            "Oi! Meu código de ativação não está funcionando. Alguém pode me auxiliar?",
-            "Boa tarde! O áudio está dessincronizado nos canais. Como corrijo isso?",
-            "Olá! Não consigo fazer login no aplicativo. Pode me ajudar?",
-            "Fala! O serviço está lento hoje. Isso é normal?",
-            "Oi! Quero reinstalar o aplicativo, mas perdi o link de download. Pode enviar novamente?"
+            "Olá! Preciso de suporte técnico para instalar o aplicativo da Mplay na minha TV. Pode me ajudar?",
+            "Fala! Estou com dificuldade para ativar minha assinatura da Mplay. Alguém me auxilia?",
+            "Oi! O app da Mplay está travando aqui. Como posso resolver esse problema?",
+            "Boa tarde! Perdi meu código de acesso da Mplay. Como recupero?",
+            "Olá! O áudio e vídeo estão dessincronizados nos canais da Mplay. O que fazer?"
         ];
 
-        // Mensagens variadas para indicação
         const mensagensIndicacao = [
-            "Olá! Gostaria de saber mais sobre o programa de INDICAÇÃO PREMIADA. Tenho amigos interessados!",
-            "Fala! Quero indicar amigos para a Mplay e ganhar meses grátis. Como funciona exatamente?",
-            "Oi! Meu amigo quer assinar e quero ganhar o mês grátis. Qual o procedimento?",
-            "Boa tarde! Tenho vários amigos que podem assinar. Como faço para participar da promoção?",
-            "Olá! Li sobre a indicação premiada e fiquei interessado. Pode me explicar como ganho os meses grátis?"
+            "Olá! Gostaria de saber como funciona o programa de indicação da Mplay. Quero ganhar meses grátis!",
+            "Fala! Tenho amigos interessados em assinar a Mplay. Como faço para indicar e ganhar o mês grátis?",
+            "Oi! A Mplay tem programa de indicação? Quero participar para ganhar benefícios."
         ];
 
-        // Função para pegar mensagem aleatória de um array
-        function getRandomMessage(array) {
-            return array[Math.floor(Math.random() * array.length)];
+        function getRandomMessage(arr) {
+            return arr[Math.floor(Math.random() * arr.length)];
         }
 
-        // Função para enviar WhatsApp com mensagem variada para VENDAS
-        function enviarWhatsVendas(mensagemPersonalizada = null, plano = null) {
+        function enviarWhatsVendas(plano = null) {
             let mensagem = "";
-            
-            if (mensagemPersonalizada) {
-                mensagem = mensagemPersonalizada;
-            } else if (plano && mensagensPorPlano[plano]) {
-                mensagem = getRandomMessage(mensagensPorPlano[plano]);
+            if (plano && mensagensPorPlano[plano]) {
+                mensagem = mensagensPorPlano[plano];
             } else {
                 mensagem = getRandomMessage(mensagensVendas);
             }
-            
-            const url = `https://wa.me/${WHATSAPP_VENDAS}?text=${encodeURIComponent(mensagem)}`;
-            window.open(url, '_blank');
+            window.open(`https://wa.me/${WHATSAPP_VENDAS}?text=${encodeURIComponent(mensagem)}`, '_blank');
         }
 
-        // Função para enviar WhatsApp para SUPORTE com mensagem variada
         function enviarWhatsSuporte() {
-            const mensagem = getRandomMessage(mensagensSuporte);
-            const url = `https://wa.me/${WHATSAPP_SUPORTE}?text=${encodeURIComponent(mensagem)}`;
-            window.open(url, '_blank');
+            window.open(`https://wa.me/${WHATSAPP_SUPORTE}?text=${encodeURIComponent(getRandomMessage(mensagensSuporte))}`, '_blank');
         }
 
-        // Função para enviar WhatsApp para INDICAÇÃO com mensagem variada
         function enviarWhatsIndicacao() {
-            const mensagem = getRandomMessage(mensagensIndicacao);
-            const url = `https://wa.me/${WHATSAPP_INDICACAO}?text=${encodeURIComponent(mensagem)}`;
-            window.open(url, '_blank');
+            window.open(`https://wa.me/${WHATSAPP_INDICACAO}?text=${encodeURIComponent(getRandomMessage(mensagensIndicacao))}`, '_blank');
         }
 
-        // ============================================
-        // EVENTOS DOS BOTÕES
-        // ============================================
-
-        // Botão principal do hero
-        document.getElementById('heroWhatsBtn').addEventListener('click', () => {
-            enviarWhatsVendas();
-        });
-
-        // Botão flutuante WhatsApp
-        document.getElementById('whatsFloatBtn').addEventListener('click', () => {
-            enviarWhatsVendas();
-        });
-
-        // Botão Assinar Principal
-        document.getElementById('btnAssinarPrincipal').addEventListener('click', () => {
-            enviarWhatsVendas();
-        });
-
-        // Botões de assinar de cada plano
+        // Eventos
+        document.getElementById('heroWhatsBtn').addEventListener('click', () => enviarWhatsVendas());
+        document.getElementById('whatsFloatBtn').addEventListener('click', () => enviarWhatsVendas());
+        document.getElementById('btnAssinarPrincipal').addEventListener('click', () => enviarWhatsVendas());
         document.querySelectorAll('.btn-assinar').forEach(btn => {
-            btn.addEventListener('click', (e) => {
-                const plano = btn.getAttribute('data-plano');
-                enviarWhatsVendas(null, plano);
-            });
+            btn.addEventListener('click', () => enviarWhatsVendas(btn.getAttribute('data-plano')));
         });
+        document.getElementById('suporteBtn').addEventListener('click', enviarWhatsSuporte);
+        document.getElementById('indicacaoBtn').addEventListener('click', enviarWhatsIndicacao);
 
-        // Botão Suporte Técnico
-        document.getElementById('suporteBtn').addEventListener('click', () => {
-            enviarWhatsSuporte();
-        });
+        // CARROSSEL TRAILERS
+        let trailerIndex = 0;
+        const trailerTrack = document.getElementById('trailerTrack');
+        const trailerCards = document.querySelectorAll('#trailerTrack .trailer-card');
+        const getTrailerVisible = () => {
+            const width = window.innerWidth;
+            if (width <= 600) return 1;
+            if (width <= 900) return 2;
+            return 3;
+        };
+        function updateTrailer() {
+            const visible = getTrailerVisible();
+            const max = Math.max(0, trailerCards.length - visible);
+            if (trailerIndex > max) trailerIndex = max;
+            if (trailerIndex < 0) trailerIndex = 0;
+            const cardWidth = trailerCards[0]?.offsetWidth + 20 || 300;
+            trailerTrack.style.transform = `translateX(-${trailerIndex * cardWidth}px)`;
+        }
+        document.getElementById('prevTrailer').addEventListener('click', () => { if (trailerIndex > 0) trailerIndex--; updateTrailer(); });
+        document.getElementById('nextTrailer').addEventListener('click', () => { if (trailerIndex + getTrailerVisible() < trailerCards.length) trailerIndex++; updateTrailer(); });
+        window.addEventListener('resize', updateTrailer);
+        setTimeout(updateTrailer, 100);
 
-        // Botão Indicação
-        document.getElementById('indicacaoBtn').addEventListener('click', () => {
-            enviarWhatsIndicacao();
-        });
-
-        // Animações de entrada
-        const cards = document.querySelectorAll('.trailer-card, .card-media');
-        cards.forEach((card, idx) => {
-            card.style.opacity = '0';
-            card.style.transform = 'translateY(20px)';
-            setTimeout(() => {
-                card.style.transition = 'all 0.5s ease';
-                card.style.opacity = '1';
-                card.style.transform = 'translateY(0)';
-            }, idx * 100);
-        });
+        // CARROSSEL IMAGENS
+        let imageIndex = 0;
+        const imageTrack = document.getElementById('imageTrack');
+        const imageCards = document.querySelectorAll('#imageTrack .card-media');
+        const getImageVisible = () => {
+            const width = window.innerWidth;
+            if (width <= 600) return 1;
+            if (width <= 900) return 2;
+            return 3;
+        };
+        function updateImage() {
+            const visible = getImageVisible();
+            const max = Math.max(0, imageCards.length - visible);
+            if (imageIndex > max) imageIndex = max;
+            if (imageIndex < 0) imageIndex = 0;
+            const cardWidth = imageCards[0]?.offsetWidth + 20 || 300;
+            imageTrack.style.transform = `translateX(-${imageIndex * cardWidth}px)`;
+        }
+        document.getElementById('prevImage').addEventListener('click', () => { if (imageIndex > 0) imageIndex--; updateImage(); });
+        document.getElementById('nextImage').addEventListener('click', () => { if (imageIndex + getImageVisible() < imageCards.length) imageIndex++; updateImage(); });
+        window.addEventListener('resize', updateImage);
+        setTimeout(updateImage, 100);
     </script>
 </body>
 </html>
